@@ -1,5 +1,5 @@
 # Project information
-site_name: 'DiNE Developer Zone'
+site_name: 'EnID Developer Zone'
 site_description: 'Test für neue Doku'
 site_author: 'mste'
 site_url: 'https://1701.github.io/site/'
@@ -19,7 +19,6 @@ nav:
     - CMP Integration: developer_cmp.md
     - Plugins: plugins.md
     - FAQ: faq.md
-    
     
     
 
