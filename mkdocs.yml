@@ -1,4 +1,74 @@
-site_name: MkLorum
+# Project information
+site_name: 'DiNE Developer Zone'
+site_description: 'Test für neue Doku'
+site_author: 'mste'
+site_url: 'https://1701.github.io/site/'
+
+
+
+# Repo
+# repo_name: 'squidfunk/mkdocs-material'
+# repo_url: 'https://github.com/squidfunk/mkdocs-material'
+
+
+# Navigation
 nav:
-    - Home: index.md
-    - About: about.md
+    - About : index.md
+    - Developer Portal: devp_services.md
+    - SSO Integration: developer.md
+    - CMP Integration: developer_cmp.md
+    - Plugins: plugins.md
+    - FAQ: faq.md
+    
+    
+    
+
+#Configuration
+theme:
+  name: 'material'
+  language: 'en'
+  palette:
+    primary: '#76B82A'
+    accent: '#545454'
+  font:
+    text: 'IBM Plex Sans'
+    code: 'Roboto Mono'
+  logo: 'images/logo.png'
+  custom_dir: custom_theme/
+  
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex
+  - pymdownx.betterem:
+      smart_enable: all
+  - pymdownx.caret
+  - pymdownx.critic
+  - pymdownx.details
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.smartsymbols
+  - pymdownx.superfences
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - pymdownx.tilde
+
+  
+# Custom  
+extra:
+  manifest: 'manifest.webmanifest'
+  search:
+    language: 'en, de'
+    
+    
+extra_css:
+  - 'stylesheets/extra.css'
+  
