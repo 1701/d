@@ -4,25 +4,7 @@ site_description: 'Test für neue Doku'
 site_author: 'mste'
 site_url: 'https://1701.github.io/d/'
 
-
-
-# Repo
-repo_name: '1701/d'
-repo_url: 'https://github.com/1701/d'
-
-
-# Navigation
-nav:
-    - About : index.md
-    - Developer Portal: devp_services.md
-    - SSO Integration: developer.md
-    - CMP Integration: developer_cmp.md
-    - Plugins: plugins.md
-    - FAQ: faq.md
-    
-    
-
-#Configuration
+# Theme Configuration
 theme:
   name: 'material'
   language: 'en'
@@ -35,6 +17,18 @@ theme:
   logo: 'images/logo.png'
   custom_dir: custom_theme/
   
+# Github Repo
+repo_name: '1701/d'
+repo_url: 'https://github.com/1701/d'
+
+# Site Navigation
+nav:
+    - About : index.md
+    - Developer Portal: devp_services.md
+    - SSO Integration: developer.md
+    - CMP Integration: developer_cmp.md
+    - Plugins: plugins.md
+    - FAQ: faq.md
 
 # Extensions
 markdown_extensions:
@@ -59,15 +53,14 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
-
   
-# Custom  
+# Custom Search Settings  
 extra:
   manifest: 'manifest.webmanifest'
   search:
     language: 'en, de'
     
-    
+# Override CSS      
 extra_css:
   - 'stylesheets/extra.css'
   
