@@ -7,8 +7,17 @@
 
 }
 
+
+.md-typeset h1[id] .headerlink:focus, .md-typeset h1[id]:hover .headerlink:hover, .md-typeset h1[id]:target .headerlink {
+    color:#76b82a
+}
+
 .md-typeset h2[id] .headerlink:focus, .md-typeset h2[id]:hover .headerlink:hover, .md-typeset h2[id]:target .headerlink {
 	  color: #76b82a;
+}
+
+.md-typeset h3[id] .headerlink:focus, .md-typeset h3[id]:hover .headerlink:hover, .md-typeset h3[id]:target .headerlink {
+    color:#76b82a
 }
 
 
