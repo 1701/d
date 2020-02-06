@@ -1,15 +1,12 @@
 /* Header */
 .md-header {
-
-    # background-color: #76b82a;
+    /* background-color: #76b82a;*/
     background-color: #fff;
     color: #545454;
-
 }
 
-
 .md-typeset h1[id] .headerlink:focus, .md-typeset h1[id]:hover .headerlink:hover, .md-typeset h1[id]:target .headerlink {
-    color:#76b82a
+    color:#76b82a;
 }
 
 .md-typeset h2[id] .headerlink:focus, .md-typeset h2[id]:hover .headerlink:hover, .md-typeset h2[id]:target .headerlink {
@@ -17,7 +14,7 @@
 }
 
 .md-typeset h3[id] .headerlink:focus, .md-typeset h3[id]:hover .headerlink:hover, .md-typeset h3[id]:target .headerlink {
-    color:#76b82a
+    color:#76b82a;
 }
 
 
@@ -27,12 +24,10 @@ html .md-nav--primary .md-nav__title--site {
 	color:#000
 }
 
-
 .md-search__input {
 	background-color:  #76b82a;
 
 }
-
 
 .md-search__input:hover {
 	background-color:#a9eb5d;
@@ -59,13 +54,9 @@ html .md-nav--primary .md-nav__title--site {
 
 }
 
-
 .md-typeset a:active {
   color: #76b82a;
 }
-
-
-
 
 /* Links  in der Navi*/
 
@@ -87,11 +78,9 @@ html .md-nav--primary .md-nav__title--site {
 }
 
 
-
 /* Footer */
 .md-footer-nav {
 	background-color: #76b82a;
-	
 }
 
 .md-footer-meta {
@@ -105,9 +94,10 @@ html .md-nav--primary .md-nav__title--site {
  
  
 html .md-footer-meta.md-typeset a {
-    color:#fff
+    color:#fff;
 }
 
 html .md-footer-meta.md-typeset a:focus, html .md-footer-meta.md-typeset a:hover {
-    color:hsla(0, 0%, 100%, .7)
+    /*color:hsla(0, 0%, 100%, .7);*/
+    text-decoration: underline;
 }
