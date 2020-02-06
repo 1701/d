@@ -2,13 +2,13 @@
 site_name: 'EnID Developer Zone'
 site_description: 'Test für neue Doku'
 site_author: 'mste'
-site_url: 'https://1701.github.io/site/'
+site_url: 'https://1701.github.io/d/'
 
 
 
 # Repo
-# repo_name: 'squidfunk/mkdocs-material'
-# repo_url: 'https://github.com/squidfunk/mkdocs-material'
+repo_name: '1701/d'
+repo_url: 'https://github.com/1701/d'
 
 
 # Navigation
