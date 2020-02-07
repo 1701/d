@@ -18,8 +18,8 @@ theme:
   custom_dir: custom_theme/
   
 # Github Repo
-repo_name: '1701/d'
-repo_url: 'https://github.com/1701/d'
+# repo_name: '1701/d'
+# repo_url: 'https://github.com/1701/d'
 
 # Site Navigation
 nav:
