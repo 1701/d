@@ -3,8 +3,8 @@
 - Material Design Theme (V4.60) for MkDocs (V5 brings more  customizing possibilities)
 
 # Access
-- Github Pages: https://doc.appmazing.net
 - Github Repo: https://github.com/1701/d
+- Rendered MkDocs HTML output on Github Pages: https://doc.appmazing.net
 
 # Structure
 - Master Branch: 
