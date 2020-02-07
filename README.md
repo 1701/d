@@ -2,11 +2,13 @@
 - Static Site Generator: MkDocs
 - Material Design Theme (V4.60) for MkDocs (V5 brings more  customizing possibilities)
 
-# Access
-- Github Repo: https://github.com/1701/d
-- Rendered MkDocs HTML output on Github Pages: https://doc.appmazing.net
+# Access Documentation
+- Rendered MkDocs HTML output on Github Pages: 
+    - **https://doc.appmazing.net**
+    - or: https://1701.github.io/d
 
-# Structure
+# Project Structure
+- Github Repo: https://github.com/1701/d
 - Master Branch: 
     - docs
         - documentation pages (markdown)
@@ -21,5 +23,3 @@
     - MkDocs HTML Site Structure
       - git add/commit/push via 'mkdocs gh-deploy' command
     - CNAME file for custom domain settings
-
-
