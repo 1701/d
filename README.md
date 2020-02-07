@@ -19,7 +19,7 @@
         - **/.DS_Store
 - gh-pages Branch
     - MkDocs HTML Site Structure
-      - git add/commit/push via 'mkdir gh-deploy' command
+      - git add/commit/push via 'mkdocs gh-deploy' command
     - CNAME file for custom domain settings
 
 
