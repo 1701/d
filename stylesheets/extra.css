@@ -101,3 +101,7 @@ html .md-footer-meta.md-typeset a:focus, html .md-footer-meta.md-typeset a:hover
     /*color:hsla(0, 0%, 100%, .7);*/
     text-decoration: underline;
 }
+
+.md-typeset .admonition.info, .md-typeset .admonition.todo, .md-typeset details.info, .md-typeset details.todo {
+  border-left-color:#76b82a;
+}

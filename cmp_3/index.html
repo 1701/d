@@ -1,0 +1,1005 @@
+
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Test für neue Doku">
+      
+      
+        <link rel="canonical" href="https://1701.github.io/d/cmp_3/">
+      
+      
+        <meta name="author" content="mste">
+      
+      
+        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+      
+        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+      
+        <meta name="lang:search.language" content="en, de">
+      
+        <meta name="lang:search.pipeline.stopwords" content="True">
+      
+        <meta name="lang:search.pipeline.trimmer" content="True">
+      
+        <meta name="lang:search.result.none" content="No matching documents">
+      
+        <meta name="lang:search.result.one" content="1 matching document">
+      
+        <meta name="lang:search.result.other" content="# matching documents">
+      
+        <meta name="lang:search.tokenizer" content="[\s\-]+">
+      
+      <link rel="shortcut icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+    
+    
+      
+        <title>APIs server-based - EnID Developer Zone</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"IBM Plex Sans","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+    
+    <link rel="stylesheet" href="../assets/fonts/material-icons.css">
+    
+      <link rel="manifest" href="../manifest.webmanifest">
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+    
+    
+    <body dir="ltr" data-md-color-primary="#76b82a" data-md-color-accent="#545454">
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#specification-for-consent-management-providers" tabindex="1" class="md-skip">
+        Skip to content
+      </a>
+    
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://1701.github.io/d/" title="EnID Developer Zone" class="md-header-nav__button md-logo">
+          
+            <img src="../images/logo.png" width="24" height="24">
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          
+            <span class="md-header-nav__topic">
+              EnID Developer Zone
+            </span>
+            <span class="md-header-nav__topic">
+              
+                APIs server-based
+              
+            </span>
+          
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+        
+      
+      
+      <main class="md-main" role="main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="https://1701.github.io/d/" title="EnID Developer Zone" class="md-nav__button md-logo">
+      
+        <img src="../images/logo.png" width="48" height="48">
+      
+    </a>
+    EnID Developer Zone
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="About" class="md-nav__link">
+      About
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../devp_services/" title="Developer Portal" class="md-nav__link">
+      Developer Portal
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../developer/" title="SSO Integration" class="md-nav__link">
+      SSO Integration
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+    
+    <label class="md-nav__link" for="nav-4">
+      CMP Integration
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-4">
+        CMP Integration
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cmp_1/" title="General information" class="md-nav__link">
+      General information
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cmp_2/" title="Browser-based API" class="md-nav__link">
+      Browser-based API
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        APIs server-based
+      </label>
+    
+    <a href="./" title="APIs server-based" class="md-nav__link md-nav__link--active">
+      APIs server-based
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apis-server-based-backend-integration" class="md-nav__link">
+    APIs server-based (backend integration)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-the-netid-identifier-tpid" class="md-nav__link">
+    Reading the netID Identifier (TPID)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-permission-identification-tc-string" class="md-nav__link">
+    Read permission (Identification, TC string)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties_1" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid_1" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tc" class="md-nav__link">
+    tc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-the-permission-identification-tc-string" class="md-nav__link">
+    Writing the permission (identification, TC string)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties_2" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identification" class="md-nav__link">
+    identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tc_1" class="md-nav__link">
+    tc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid_2" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_2" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../cmp_4/" title="Data export for partners" class="md-nav__link">
+      Data export for partners
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../plugins/" title="Plugins" class="md-nav__link">
+      Plugins
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apis-server-based-backend-integration" class="md-nav__link">
+    APIs server-based (backend integration)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#reading-the-netid-identifier-tpid" class="md-nav__link">
+    Reading the netID Identifier (TPID)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#read-permission-identification-tc-string" class="md-nav__link">
+    Read permission (Identification, TC string)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties_1" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid_1" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tc" class="md-nav__link">
+    tc
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_1" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#writing-the-permission-identification-tc-string" class="md-nav__link">
+    Writing the permission (identification, TC string)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#json-properties_2" class="md-nav__link">
+    JSON Properties
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#request" class="md-nav__link">
+    request
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#identification" class="md-nav__link">
+    identification
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tc_1" class="md-nav__link">
+    tc
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#response" class="md-nav__link">
+    response
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tpid_2" class="md-nav__link">
+    tpid
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status_2" class="md-nav__link">
+    status
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="specification-for-consent-management-providers">Specification for Consent Management Providers<a class="headerlink" href="#specification-for-consent-management-providers" title="Permanent link">&para;</a></h1>
+<h2 id="apis-server-based-backend-integration">APIs server-based (backend integration)<a class="headerlink" href="#apis-server-based-backend-integration" title="Permanent link">&para;</a></h2>
+<p>Description of the backend integration of the netID Permission Center by the CMP (integration from the server side / backend of the CMP if available).</p>
+<p>In the case of first use and netID registration via the SSO flow, the publisher (TAPP) receives the authentication token (<code>token</code>) after the successful login, with which the user can be authenticated at the netID Permission Center. The CMP can use this authentication token to read and write the netID permissions / TC string of the user.</p>
+<p>Remarks:</p>
+<ul>
+<li>
+<p>The server-based requests are secured by the authentication token.</p>
+</li>
+<li>
+<p>Calls of this type are blocked from the web (no Origin header is allowed!)</p>
+</li>
+</ul>
+<h3 id="reading-the-netid-identifier-tpid">Reading the netID Identifier (TPID)<a class="headerlink" href="#reading-the-netid-identifier-tpid" title="Permanent link">&para;</a></h3>
+<p>A CMP can retrieve the netID Identifier (TPID) via the following
+interface:</p>
+<div class="codehilite"><pre><span></span>GET https://READSERVICE.netid.de/identification/tpid?token<span class="o">=</span>&lt;TOKEN&gt;
+Accept: application/vnd.netid.identification.tpid-read-v1+json
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="m">200</span> OK
+Content-Type: application/vnd.netid.identification.tpid-read-v1+json
+<span class="o">{</span>
+  <span class="s2">&quot;tpid&quot;</span>: <span class="s2">&quot;&lt;TPID&gt;|null&quot;</span>
+  <span class="s2">&quot;status&quot;</span>: <span class="s2">&quot;OK|NO_TOKEN|TOKEN_ERROR|CONSENT_REQUIRED&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+<h4 id="json-properties">JSON Properties<a class="headerlink" href="#json-properties" title="Permanent link">&para;</a></h4>
+<h5 id="tpid">tpid<a class="headerlink" href="#tpid" title="Permanent link">&para;</a></h5>
+<p>The ID of the netID user (<code>tpid</code>). Only if consent "Identification" is given, the <code>tpid</code> is present and status "OK". Otherwise null.</p>
+<h5 id="status">status<a class="headerlink" href="#status" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>status</th>
+<th>meaning</th>
+<th>tc oder pid??? @andrea</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OK</td>
+<td>A TC string was stored for this TPID.</td>
+<td>x</td>
+</tr>
+<tr>
+<td>NO_TOKEN</td>
+<td>No authentication token was transferred.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>TOKEN_ERROR</td>
+<td>Authentication token (JWT) has expired or is invalid.</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CONSENT_REQUIRED</td>
+<td>Consent for passing on the TPID missing ("Identification").</td>
+<td>x</td>
+</tr>
+</tbody>
+</table>
+<h3 id="read-permission-identification-tc-string">Read permission (Identification, TC string)<a class="headerlink" href="#read-permission-identification-tc-string" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>GET https://READSERVICE.netid.de/permissions/iab-permissions?token<span class="o">=</span>&lt;TOKEN&gt;
+Accept: application/vnd.netid.permissions.iab-permission-read-v1+json
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="m">200</span> OK
+Content-Type: application/vnd.netid.permissions.iab-permission-read-v1+json
+
+<span class="o">{</span>
+  <span class="s2">&quot;tpid&quot;</span>: <span class="s2">&quot;&lt;TPID&gt;|null&quot;</span>,
+  <span class="s2">&quot;tc&quot;</span>: <span class="s2">&quot;&lt;TC string&gt;|null&quot;</span>,
+  <span class="s2">&quot;status&quot;</span>: <span class="s2">&quot;OK|NO_TOKEN|TOKEN_ERROR|CONSENT_REQUIRED&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+<h4 id="json-properties_1">JSON Properties<a class="headerlink" href="#json-properties_1" title="Permanent link">&para;</a></h4>
+<h5 id="tpid_1">tpid<a class="headerlink" href="#tpid_1" title="Permanent link">&para;</a></h5>
+<p>The ID of the netID user (<code>tpid</code>). Only if consent "Identification" is given, the <code>tpid</code> is present and status "OK". Otherwise null.</p>
+<h5 id="tc">tc<a class="headerlink" href="#tc" title="Permanent link">&para;</a></h5>
+<p>The TC string stored for this <code>tpid</code> for this publisher (TCF 2.0). Only with status "OK". Otherwise null.</p>
+<h5 id="status_1">status<a class="headerlink" href="#status_1" title="Permanent link">&para;</a></h5>
+<table>
+<thead>
+<tr>
+<th>status</th>
+<th>significance</th>
+<th>tc</th>
+<th>pid</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OK</td>
+<td>TC String was stored for this <code>tpid</code>.</td>
+<td>x</td>
+<td>x</td>
+</tr>
+<tr>
+<td>NO_TPID</td>
+<td>No authentication token was transferred.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>TOKEN_ERROR</td>
+<td>Authentication token (JWT) has expired or is invalid.</td>
+<td>-</td>
+<td>-</td>
+</tr>
+<tr>
+<td>CONSENT_REQUIRED</td>
+<td>Consent for passing on the <code>tpid</code> missing ("Identification").</td>
+<td>x</td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="writing-the-permission-identification-tc-string">Writing the permission (identification, TC string)<a class="headerlink" href="#writing-the-permission-identification-tc-string" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span>POST https://WRITESERVICE.netid.de/permissions/iab-permissions?token<span class="o">=</span>&lt;TOKEN&gt;
+Content-Type: application/vnd.netid.permissions.iab-permission-write-v1+json
+<span class="o">{</span>
+  <span class="s2">&quot;identification&quot;</span>: <span class="s2">&quot;true|false&quot;</span>,
+  <span class="s2">&quot;tc&quot;</span>: <span class="s2">&quot;&lt;TC string&gt;&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+<div class="codehilite"><pre><span></span><span class="m">201</span> CREATED
+Location: https://READSERVICE.netid.de/permissions/iab-permissions?token<span class="o">=</span>&lt;TOKEN&gt;
+
+<span class="o">{</span>
+  <span class="s2">&quot;tpid&quot;</span>: <span class="s2">&quot;&lt;TPID&gt;|null&quot;</span>,
+  <span class="s2">&quot;status&quot;</span>: <span class="s2">&quot;OK|NO_TOKEN|TOKEN_ERROR&quot;</span>
+<span class="o">}</span>
+</pre></div>
+
+<p>Remarks:</p>
+<ul>
+<li>If permission "identification" has been given by the user, this must be signaled by passing "identification: true". For the avoidance of doubt, this of course requires the prior collection of this consent by the CMP. </li>
+<li>If only the TC string is to be updated and the permission "Identification" already exists, only the "tc" attribute can be passed. Both can also be written at the same time.</li>
+<li>In case of revocation of permission "Identification", would pass only "identification: false".</li>
+</ul>
+<h4 id="json-properties_2">JSON Properties<a class="headerlink" href="#json-properties_2" title="Permanent link">&para;</a></h4>
+<h5 id="request">request<a class="headerlink" href="#request" title="Permanent link">&para;</a></h5>
+<h6 id="identification">identification<a class="headerlink" href="#identification" title="Permanent link">&para;</a></h6>
+<p>The permission "Identification" (ID CONSENT) is to be stored (or not).</p>
+<h6 id="tc_1">tc<a class="headerlink" href="#tc_1" title="Permanent link">&para;</a></h6>
+<p>The TC String which should be stored for this TPID for this publisher (TCF 2.0).</p>
+<h5 id="response">response<a class="headerlink" href="#response" title="Permanent link">&para;</a></h5>
+<h6 id="tpid_2">tpid<a class="headerlink" href="#tpid_2" title="Permanent link">&para;</a></h6>
+<p>The ID of the netID user (<code>tpid</code>). Only if consent "Identification" is given, the <code>tpid</code> is present and status "OK". Otherwise null.</p>
+<h6 id="status_2">status<a class="headerlink" href="#status_2" title="Permanent link">&para;</a></h6>
+<table>
+<thead>
+<tr>
+<th>status</th>
+<th>significance</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>OK</td>
+<td>TC String / ID CONSENT was saved.</td>
+</tr>
+<tr>
+<td>NO_TOKEN</td>
+<td>No authentication token was transferred.</td>
+</tr>
+<tr>
+<td>TOKEN_ERROR</td>
+<td>Authentication token (JWT) has expired or is invalid.</td>
+</tr>
+</tbody>
+</table>
+                
+                  
+                
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+
+
+<footer class="md-footer">
+ <!--   
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+        
+          <a href="about/" title="About" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                About
+              </span>
+            </div>
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+    -->
+
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid" align="center">
+      <div class="md-footer-copyright">
+      <a href="https://enid.eu" target="_blank">European netID Foundation</a> | <a href="https://example.com" target="_blank">Datenschutzhinweise</a> | <a href="https://enid.eu/partner" target="_blank">Partner werden</a> | <a href="https://developer.netid.de" target="_blank">netID Developer Portal</a>  
+      
+      </div>
+      
+    </div>
+  </div> 
+</footer>
+
+
+
+
+    </div>
+    
+      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.de.js"></script>
+              
+            
+          
+          
+            <script src="../assets/javascripts/lunr/lunr.multi.js"></script>
+          
+        
+      
+      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+    
+  </body>
+</html>
