@@ -4,4 +4,3 @@ The European netID Foundation was founded in March 2018 by Mediengruppe RTL Deut
 
 - https://netid.de/
 - https://enid.foundation/
-
