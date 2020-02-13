@@ -25,6 +25,7 @@
     - CNAME file for custom domain settings
 
 # Content Creation:
+
 - Write new docs with Markdown: https://www.mkdocs.org/user-guide/writing-your-docs/
 - Convert existing Word Document -> Markdown with pandoc:
     - command line: 'pandoc -f docx -t markdown foo.docx -o foo.markdown'
