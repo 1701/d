@@ -39,6 +39,8 @@ The trick is:
 
 This section is the relevant section of the doc: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
 
+Mermaid Syntax: https://mermaid-js.github.io/mermaid/#/
+
 ``` shell
 markdown_extensions:
   - pymdownx.superfences:
