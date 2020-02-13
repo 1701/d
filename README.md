@@ -50,8 +50,8 @@ markdown_extensions:
 
 ``` shell
 extra_css:
+- https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
 
-- <https://unpkg.com/mermaid@7.1.2/dist/mermaid.css>
 extra_javascript:
-- <https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js>
+- https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
 ```

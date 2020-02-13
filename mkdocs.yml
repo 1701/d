@@ -57,6 +57,11 @@ markdown_extensions:
   - pymdownx.tasklist:
       custom_checkbox: true
   - pymdownx.tilde
+  - pymdownx.superfences:
+    custom_fences:
+      - name: mermaid
+        class: mermaid
+        format: !!python/name:pymdownx.superfences.fence_div_format
   
 # Custom Search Settings  
 extra:
@@ -67,4 +72,8 @@ extra:
 # Override CSS      
 extra_css:
   - 'stylesheets/extra.css'
-  
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
+
+# JS 
+extra_javascript:
+  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
