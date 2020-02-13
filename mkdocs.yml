@@ -58,10 +58,10 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
   - pymdownx.superfences:
-    custom_fences:
-      - name: mermaid
-        class: mermaid
-        format: !!python/name:pymdownx.superfences.fence_div_format
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
   
 # Custom Search Settings  
 extra:
