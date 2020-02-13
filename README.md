@@ -30,3 +30,28 @@
     - command line: 'pandoc -f docx -t markdown foo.docx -o foo.markdown'
     - to save the images, add the option --extract-media=./ to the command above. It will create a folder 'media' with all the images and they will be correctly shown in the markdown file.
     - Make sure that the result of the automatic conversion is proper. 
+
+# Mermaid -> Diagrams
+
+The trick is:
+- To include MermaidJS assets in your bundle
+- to use Pymdown's Superfences extension to make mkdocs build "mermaid" code sections into div with the "mermaid" class.
+
+This section is the relevant section of the doc: https://facelessuser.github.io/pymdown-extensions/extensions/superfences/#custom-fences
+
+``` shell
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_div_format
+```
+
+``` shell
+extra_css:
+
+- <https://unpkg.com/mermaid@7.1.2/dist/mermaid.css>
+extra_javascript:
+- <https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js>
+```
