@@ -47,8 +47,6 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_div_format
 
-extra_css:
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
 extra_javascript:
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+  - 'https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js'
 ```
