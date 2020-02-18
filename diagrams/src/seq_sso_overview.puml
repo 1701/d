@@ -1,0 +1,77 @@
+@startuml
+
+skinparam sequence {
+	ArrowColor #76b82a
+	ActorBorderColor #76b82a
+    ActorBackgroundColor #FFF
+	ActorFontColor #000
+    ActorFontName Arial
+	ActorFontSize 17
+
+	LifeLineBorderColor #76b82a
+	LifeLineBackgroundColor #76b82a
+	
+	ParticipantBorderColor #76b82a
+	ParticipantBackgroundColor #76b82a
+	ParticipantFontName Arial
+	ParticipantFontSize 17
+	ParticipantFontColor #FFF
+
+}
+
+autonumber "<b>[00]"
+actor "netID User" as eu
+participant  "Website (RP)" as ws
+participant  "Identity Broker (IOP/IRP)" as ib
+participant  "netID Account Provider (OP)" as op
+group Browser
+    eu -> ws : Start a use case that requires SSO Login 
+    activate ws
+    ws -> eu : Show "netID Login Button" to invoke AuthReq with parameters
+    deactivate ws
+    eu -> ib : Trigger AuthReq
+    activate ib
+    ib -> eu : Redirect to OP with new AuthReq
+    deactivate ib
+    eu -> op : Login with Credentials
+    activate op
+    op -> eu : Show requested claims and ask for consent
+    deactivate op
+    eu -> op : Consent to data transfer
+    activate op
+    op -> eu : Issue AuthN Response and redirect to IRP
+    deactivate op
+    eu -> ib : Transfer AuthN Response via redirect URL
+    activate ib
+    ib -> eu : Store AuthN Response encrypted in new AuthN Response for RP\nand redirect browser to RP
+    deactivate ib
+    activate eu
+    eu -> ws : Transfer AuthN Response via redirect URL
+    activate ws
+
+    group Server-2-Server
+
+        ws -> ib : Request AccessToken
+        activate ib
+        ib -> op : Request AccessToken
+        activate op
+        op -> ib : Return AccessToken
+        deactivate op
+        ib -> ws : Return AccessToken
+        deactivate ib
+
+        ws -> ib : Request UserInfo
+        activate ib
+        ib -> op : Request UserInfo
+        activate op
+        op -> ib : Return UserInfo
+        deactivate op
+        ib -> ws : Return UserInfo
+        deactivate ib
+    end
+
+    ws -> eu : Report Successful Identification
+    deactivate ws
+    deactivate eu
+end
+@enduml
