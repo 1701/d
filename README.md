@@ -1,15 +1,18 @@
 # EnID Documentation Proof of Concept
+
 - Static Site Generator: MkDocs
 - Material Design Theme (V4.60) for MkDocs (V5 brings more  customizing possibilities)
 
-# Access Documentation
-- Rendered MkDocs HTML output on Github Pages: 
+## Access Documentation
+
+- Rendered MkDocs HTML output on Github Pages:
     - **https://doc.appmazing.net**
     - or: https://1701.github.io/d
 
-# Project Structure
+## Project Structure
+
 - Github Repo: https://github.com/1701/d
-- Master Branch: 
+- Master Branch:
     - docs
         - documentation pages (markdown)
         - Folder '/stylesheets/' (override theme preset)
@@ -24,7 +27,7 @@
       - git add/commit/push via 'mkdocs gh-deploy' command
     - CNAME file for custom domain settings
 
-# Content Creation:
+## Content Creation
 
 - Write new docs with Markdown: https://www.mkdocs.org/user-guide/writing-your-docs/
 - Convert existing Word Document -> Markdown with pandoc:
@@ -32,9 +35,19 @@
     - to save the images, add the option --extract-media=./ to the command above. It will create a folder 'media' with all the images and they will be correctly shown in the markdown file.
     - Make sure that the result of the automatic conversion is proper. 
 
-# Mermaid -> Diagrams
+## PlantUML -> Diagrams
+
+- Install Java 'brew cask install adoptopenjdk'
+- Install "PlantUML" -> 'brew install plantuml'
+- Install MkDocs PlantUML Plugin: pip3 install mkdocs-build-plantuml-plugin (https://github.com/christo-ph/mkdocs_build_plantuml)
+- Generate PlantUML Source Files in /docs/diagrams/src/filename.puml
+- When starting with mkdocs serve, it will create all diagrams initially.
+- Integrate Output File in ".md" -> ![file](diagrams/out/filename.svg)
+
+## Mermaid -> Diagrams
 
 The trick is:
+
 - To include MermaidJS assets in your bundle
 - to use Pymdown's Superfences extension to make mkdocs build "mermaid" code sections into div with the "mermaid" class.
 
