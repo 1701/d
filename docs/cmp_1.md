@@ -75,4 +75,7 @@ If, depending on the context, the `token` or the `tpid_sec` does not
 exist, has expired or is invalid, a publisher cannot read/write the TC
 String and of course cannot access the TPID.
 
+![High Level Authentication Code Flow](diagrams/out/seq_cmp_api.svg)
+
+
 ![User recognition when using APIs](images/cmp_api_highLevel.png)

@@ -255,6 +255,3 @@ The simple example client netid.go first needs to be edited before Client Creden
 ```
 go run netid.go
 ```
-
-
-    
