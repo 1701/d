@@ -47,7 +47,7 @@
 - Integrate Output File in ".md" -> `![file](diagrams/out/filename.svg)`
 - Styling: https://plantuml.com/de/skinparam
 
-## Mermaid -> Diagrams
+## Mermaid -> Diagrams (currently not implemented)
 
 The trick is:
 
