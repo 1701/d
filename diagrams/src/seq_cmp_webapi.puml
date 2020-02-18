@@ -1,0 +1,53 @@
+@startuml
+
+skinparam sequence {
+	ArrowColor #76b82a
+	ActorBorderColor #76b82a
+    ActorBackgroundColor #FFF
+	ActorFontColor #000
+    ActorFontName Arial
+	ActorFontSize 17
+
+	LifeLineBorderColor #76b82a
+	LifeLineBackgroundColor #76b82a
+	
+	ParticipantBorderColor #76b82a
+	ParticipantBackgroundColor #76b82a
+	ParticipantFontName Arial
+	ParticipantFontSize 17
+	ParticipantFontColor #FFF
+
+}
+
+autonumber "<b>[00]"
+participant  "CMP JS" as cmp
+participant  "Browser" as br
+participant  "Permission Layer" as pl
+participant  "Read Service" as rs
+participant  "IdentWrite Service" as ws
+
+cmp -> br : Check TC string cookie in the Publisher domain.
+activate br
+br -> cmp : response
+deactivate br
+group If there is no TC string present
+    cmp -> rs : try to retrieve the TC string
+    activate rs
+    rs -> cmp : response
+    deactivate rs
+    end
+group If a TC String exists and permissions suffice
+    cmp -> pl : abort and continue processing. Otherwise display overlay for the purpose of obtaining permissions from the user.
+    activate pl
+    pl -> cmp : response
+    deactivate pl
+    end
+cmp -> ws : JS writes the TC String via the netID WRITE SERVICE, as well as (if given) the consent for identification via netID.
+activate ws
+ws -> cmp : response
+deactivate ws
+cmp -> br : JS also writes the TC string as a local cookie in the publisher domain.
+activate br
+br -> cmp : response
+deactivate br
+@enduml

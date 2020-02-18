@@ -19,60 +19,21 @@ skinparam sequence {
 
 }
 
-autonumber "<b>[00]"
 participant  "CMP" as cmp
-participant  "Browser" as br
 participant  "Read Service" as rs
 participant  "IdentWrite Service" as ws
 participant  "Data Export Service" as des
-group Browser
-    eu -> ws : Start a use case that requires SSO Login 
-    activate ws
-    ws -> eu : Show "netID Login Button" to invoke AuthReq with parameters
-    deactivate ws
-    eu -> ib : Trigger AuthReq
-    activate ib
-    ib -> eu : Redirect to OP with new AuthReq
-    deactivate ib
-    eu -> op : Login with Credentials
-    activate op
-    op -> eu : Show requested claims and ask for consent
-    deactivate op
-    eu -> op : Consent to data transfer
-    activate op
-    op -> eu : Issue AuthN Response and redirect to IRP
-    deactivate op
-    eu -> ib : Transfer AuthN Response via redirect URL
-    activate ib
-    ib -> eu : Store AuthN Response encrypted in new AuthN Response for RP\nand redirect browser to RP
-    deactivate ib
-    activate eu
-    eu -> ws : Transfer AuthN Response via redirect URL
-    activate ws
 
-    group Server-2-Server
-
-        ws -> ib : Request AccessToken
-        activate ib
-        ib -> op : Request AccessToken
-        activate op
-        op -> ib : Return AccessToken
-        deactivate op
-        ib -> ws : Return AccessToken
-        deactivate ib
-
-        ws -> ib : Request UserInfo
-        activate ib
-        ib -> op : Request UserInfo
-        activate op
-        op -> ib : Return UserInfo
-        deactivate op
-        ib -> ws : Return UserInfo
-        deactivate ib
-    end
-
-    ws -> eu : Report Successful Identification
-    deactivate ws
-    deactivate eu
-end
+cmp -> rs : GET foo @Andrea/Achim
+activate rs
+rs -> cmp : response
+deactivate rs
+cmp -> ws : POST foo @Andrea/Achim
+activate ws
+ws -> cmp : response
+deactivate ws
+cmp -> des : GET foo @Andrea/Achim
+activate des
+des -> cmp : response
+deactivate des
 @enduml

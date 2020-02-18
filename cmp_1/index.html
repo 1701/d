@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#specification-for-consent-management-providers" tabindex="1" class="md-skip">
+      <a href="#general-information" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -270,43 +270,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#netid-permission-center-services" class="md-nav__link">
     netID Permission Center Services
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#interfaces" class="md-nav__link">
     Interfaces
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#authentication-netid-partner" class="md-nav__link">
     Authentication netID Partner
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#user-recognition-when-using-apis" class="md-nav__link">
     User recognition when using APIs
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -339,8 +326,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../cmp_3/" title="APIs server-based" class="md-nav__link">
-      APIs server-based
+    <a href="../cmp_3/" title="Server-based API" class="md-nav__link">
+      Server-based API
     </a>
   </li>
 
@@ -407,43 +394,30 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#general-information" class="md-nav__link">
-    General information
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#netid-permission-center-services" class="md-nav__link">
     netID Permission Center Services
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#interfaces" class="md-nav__link">
     Interfaces
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#authentication-netid-partner" class="md-nav__link">
     Authentication netID Partner
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#user-recognition-when-using-apis" class="md-nav__link">
     User recognition when using APIs
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -464,14 +438,13 @@
               
                 
                 
-                <h1 id="specification-for-consent-management-providers">Specification for Consent Management Providers<a class="headerlink" href="#specification-for-consent-management-providers" title="Permanent link">&para;</a></h1>
+                <h1 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h1>
 <div class="admonition info">
 <p>This White Paper was prepared by the European netID Foundation ("EnID") and by 1&amp;1 Mail &amp; Media GmbH ("1&amp;1") - as a recognized technical service provider of "EnID" - to the best of their knowledge, with due diligence and taking into account the current state of knowledge and development.</p>
 <p>"EnID" and "1&amp;1" and their legal representatives and/or vicarious agents do not guarantee that the contents of this white paper are secure, completely usable for certain purposes or otherwise free of errors. The use of this white paper is solely at your own risk.</p>
 <p>In no case "EnID" and "1&amp;1" and their legal representatives and/or vicarious agents are liable for any damage, whether direct or indirect, resulting from the use of the white paper.</p>
 </div>
-<h2 id="general-information">General information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h2>
-<h3 id="netid-permission-center-services">netID Permission Center Services<a class="headerlink" href="#netid-permission-center-services" title="Permanent link">&para;</a></h3>
+<h2 id="netid-permission-center-services">netID Permission Center Services<a class="headerlink" href="#netid-permission-center-services" title="Permanent link">&para;</a></h2>
 <p>The following <strong>netID Permission Center Services</strong> are provided which allow a CMP to store / manage netID Permissions, TC Strings for a netID Partner:</p>
 <ul>
 <li>READ SERVICE (read the netID identifier (TPID) or <strong>netID permissions, TC strings</strong>)</li>
@@ -479,7 +452,7 @@
 <li>DATA EXPORT SERVICE (exporting the <strong>netID permissions, TC strings</strong> for the partner)</li>
 </ul>
 <p>Currently there is only one netID permission, namely identification. netID does not support the collection and processing of TC strings with global scope.</p>
-<h3 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h3>
+<h2 id="interfaces">Interfaces<a class="headerlink" href="#interfaces" title="Permanent link">&para;</a></h2>
 <p>The following functionalities are provided to the <strong>CMP:</strong></p>
 <ul>
 <li><strong>browser-based</strong> APIs:<ul>
@@ -531,7 +504,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="authentication-netid-partner">Authentication netID Partner<a class="headerlink" href="#authentication-netid-partner" title="Permanent link">&para;</a></h3>
+<h2 id="authentication-netid-partner">Authentication netID Partner<a class="headerlink" href="#authentication-netid-partner" title="Permanent link">&para;</a></h2>
 <p>Authentication of partners for the browser-based APIs is handled via the
 parameter <code>tapp_id</code> and the <code>Origin</code> header. Access is secured via
 CORS.</p>
@@ -544,7 +517,7 @@ CORS.</p>
 <li>The user-specific read/write accesses are secured via access tokens.</li>
 <li>Generic Data Export using Basic Authentication</li>
 </ul>
-<h3 id="user-recognition-when-using-apis">User recognition when using APIs<a class="headerlink" href="#user-recognition-when-using-apis" title="Permanent link">&para;</a></h3>
+<h2 id="user-recognition-when-using-apis">User recognition when using APIs<a class="headerlink" href="#user-recognition-when-using-apis" title="Permanent link">&para;</a></h2>
 <p>The recognition of the active netID user takes place depending on the
 API used by means of the <code>tpid_sec</code> (browser-based) or the
 <code>token</code> (server-based).</p>
@@ -559,7 +532,6 @@ access independently of the SSO session (limited in time).</p>
 <p>If, depending on the context, the <code>token</code> or the <code>tpid_sec</code> does not
 exist, has expired or is invalid, a publisher cannot read/write the TC
 String and of course cannot access the TPID.</p>
-<p><img alt="High Level Authentication Code Flow" src="../diagrams/out/seq_cmp_api.svg" /></p>
 <p><img alt="User recognition when using APIs" src="../images/cmp_api_highLevel.png" /></p>
                 
                   

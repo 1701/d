@@ -91,7 +91,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#specification-for-consent-management-providers" tabindex="1" class="md-skip">
+      <a href="#data-export-for-partners" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -267,8 +267,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../cmp_3/" title="APIs server-based" class="md-nav__link">
-      APIs server-based
+    <a href="../cmp_3/" title="Server-based API" class="md-nav__link">
+      Server-based API
     </a>
   </li>
 
@@ -287,38 +287,9 @@
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Data export for partners
-      </label>
-    
     <a href="./" title="Data export for partners" class="md-nav__link md-nav__link--active">
       Data export for partners
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-export-for-partners" class="md-nav__link">
-    Data export for partners
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
     
   </li>
 
@@ -369,22 +340,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#data-export-for-partners" class="md-nav__link">
-    Data export for partners
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -396,8 +351,7 @@
               
                 
                 
-                <h1 id="specification-for-consent-management-providers">Specification for Consent Management Providers<a class="headerlink" href="#specification-for-consent-management-providers" title="Permanent link">&para;</a></h1>
-<h2 id="data-export-for-partners">Data export for partners<a class="headerlink" href="#data-export-for-partners" title="Permanent link">&para;</a></h2>
+                <h1 id="data-export-for-partners">Data export for partners<a class="headerlink" href="#data-export-for-partners" title="Permanent link">&para;</a></h1>
 <p>Via this API partners get the ability to query netID permissions and TC strings of users (export) unrelated to a specific context, via the specification of changed_since  deltas can also be queried. There is an HTTP service with a REST API for this service.</p>
 <div class="codehilite"><pre><span></span>GET https://DATA-EXPORT-SERVICE/permissions/iab-permissions? <span class="nv">tapp_id</span><span class="o">=</span>&lt;TAPP_ID&gt;<span class="p">&amp;</span><span class="nv">changed_since</span><span class="o">=</span>&lt;DATE&gt;
 Accept: application/vnd.netid.permissions.iab-permission-export.list-v1+json
