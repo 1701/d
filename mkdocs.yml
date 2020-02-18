@@ -25,7 +25,7 @@ theme:
 nav:
     - About : index.md
     - Developer Portal: devp_services.md
-    - SSO Integration: developer.md
+    - SSO Integration: doc_sso_developer.md
     - CMP Integration:
         - General information: cmp_1.md
         - Browser-based API: cmp_2.md
@@ -69,7 +69,19 @@ extra:
   search:
     language: 'en, de'
     
-# Override CSS      
+# PlantUML
+plugins:
+  - search
+  - build_plantuml:
+      render: "server" # or "local" for local rendering
+      bin_path: "/usr/local/bin/plantuml" # ignored when render: server
+      server: "http://www.plantuml.com/plantuml" # offical plantuml server
+      output_format: "svg" # or "png"
+      diagram_root: "docs/diagrams" # should reside under docs_dir
+      output_folder: "out"
+      input_folder: "src"
+
+    # Override CSS      
 extra_css:
   - 'stylesheets/extra.css'
   - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css

@@ -49,7 +49,7 @@ Here, the endpoint https://broker.netid.de/authorize is used with the SSO broker
 Examples, given both easy readable as well as in valid URL encoding. The encoding needs to be used for the redirect_uri as well:
 
 **Minimum Query - SSO without requesting any additional data**
-    ```
+    ```bash
     https://broker.netid.de/authorize?
         response_type=code&
         client_id=[clientID]&
@@ -58,7 +58,7 @@ Examples, given both easy readable as well as in valid URL encoding. The encodin
     ```
 
 **Query for “profile” scope as essential claim**
-    ```
+    ```bash
     https://broker.netid.de/authorize?
         response_type=code&
         client_id=[clientID]&
@@ -75,7 +75,7 @@ Examples, given both easy readable as well as in valid URL encoding. The encodin
     ```
 
 **Query for claims that correspond to the “profile” scope and “address” as essential**
-    ```
+    ```bash
     https://broker.netid.de/authorize?
         response_type=code&
         client_id=[clientID]&
@@ -131,7 +131,7 @@ The following request parameters are supported for initiating the SSO process:
 
 The sequence of the calls is summarized as follows:
 
-![High Level Authentication Code Flow](images/authflow.png)
+![High Level Authentication Code Flow](diagrams/out/seq_sso_overview.svg)
 
 Detailed description of diagram:
   
