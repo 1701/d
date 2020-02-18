@@ -23,8 +23,8 @@ theme:
 
 # Site Navigation
 nav:
-    - About : index.md
-    - Developer Portal: devp_services.md
+    - About : about.md
+    - Developer Portal: doc_devp.md
     - SSO Integration: doc_sso_developer.md
     - CMP Integration:
         - General information: cmp_1.md
