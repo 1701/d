@@ -1,6 +1,4 @@
-# Specification for Consent Management Providers
-
-## Data export for partners
+# Data export for partners
 
 Via this API partners get the ability to query netID permissions and TC strings of users (export) unrelated to a specific context, via the specification of changed_since  deltas can also be queried. There is an HTTP service with a REST API for this service.
 

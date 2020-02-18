@@ -1,4 +1,4 @@
-# Specification for Consent Management Providers
+# General information
 
 !!! info ""
     This White Paper was prepared by the European netID Foundation ("EnID") and by 1&1 Mail & Media GmbH ("1&1") - as a recognized technical service provider of "EnID" - to the best of their knowledge, with due diligence and taking into account the current state of knowledge and development.
@@ -7,9 +7,7 @@
 
     In no case "EnID" and "1&1" and their legal representatives and/or vicarious agents are liable for any damage, whether direct or indirect, resulting from the use of the white paper.
 
-## General information
-
-### netID Permission Center Services
+## netID Permission Center Services
 
 The following **netID Permission Center Services** are provided which allow a CMP to store / manage netID Permissions, TC Strings for a netID Partner:
 
@@ -19,7 +17,7 @@ The following **netID Permission Center Services** are provided which allow a CM
 
 Currently there is only one netID permission, namely identification. netID does not support the collection and processing of TC strings with global scope.
 
-### Interfaces
+## Interfaces
 
 The following functionalities are provided to the **CMP:**
 
@@ -41,7 +39,7 @@ Call information: Parameters / Header / Cookies
 | tpid_sec | cookie | user identification | Only relevant for the browser-based API: is located in the netid.de domain and is automatically passed on by the browser - if available. |
 | token | parameter | User recognition/Access Token | Only relevant for the server-based API: Can be retrieved by the partner via the SSO process, is passed to access the API/identify the user |
 
-### Authentication netID Partner
+## Authentication netID Partner
 
 Authentication of partners for the browser-based APIs is handled via the
 parameter `tapp_id` and the `Origin` header. Access is secured via
@@ -55,7 +53,7 @@ Authentication with the server-based APIs is done as follows.
 - The user-specific read/write accesses are secured via access tokens.
 - Generic Data Export using Basic Authentication
 
-### User recognition when using APIs
+## User recognition when using APIs
 
 The recognition of the active netID user takes place depending on the
 API used by means of the `tpid_sec` (browser-based) or the
@@ -74,8 +72,5 @@ access independently of the SSO session (limited in time).
 If, depending on the context, the `token` or the `tpid_sec` does not
 exist, has expired or is invalid, a publisher cannot read/write the TC
 String and of course cannot access the TPID.
-
-![High Level Authentication Code Flow](diagrams/out/seq_cmp_api.svg)
-
 
 ![User recognition when using APIs](images/cmp_api_highLevel.png)

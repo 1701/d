@@ -13,11 +13,13 @@
 
 - Github Repo: https://github.com/1701/d
 - Master Branch:
-    - docs
-        - documentation pages (markdown)
+    - docs folder
+        - *.md documentation pages (markdown)
         - Folder '/stylesheets/' (override theme preset)
         - Folder '/images/' (image files)
-    - custom theme
+        - Folder '/diagrams/src' -> PlantUML source files
+        - Folder '/diagrams/out' -> PlantUML SVG output 
+    - custom theme folder
         - main.html (override standard footer)
     - .gitignore
         - /site Folder
@@ -43,6 +45,7 @@
 - Generate PlantUML Source Files in `/docs/diagrams/src/filename.puml`
 - When starting with `mkdocs serve`, it will create all diagrams initially.
 - Integrate Output File in ".md" -> `![file](diagrams/out/filename.svg)`
+- Styling: https://plantuml.com/de/skinparam
 
 ## Mermaid -> Diagrams
 

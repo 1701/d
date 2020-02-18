@@ -1,10 +1,10 @@
-# Specification for Consent Management Providers
-
-## APIs server-based (backend integration)
+# Server-based API (backend integration)
 
 Description of the backend integration of the netID Permission Center by the CMP (integration from the server side / backend of the CMP if available).
 
 In the case of first use and netID registration via the SSO flow, the publisher (TAPP) receives the authentication token (`token`) after the successful login, with which the user can be authenticated at the netID Permission Center. The CMP can use this authentication token to read and write the netID permissions / TC string of the user.
+
+![Server based API](diagrams/out/seq_cmp_api.svg)
 
 Remarks:
 
@@ -12,7 +12,7 @@ Remarks:
 
 - Calls of this type are blocked from the web (no Origin header is allowed!)
 
-### Reading the netID Identifier (TPID)
+## Reading the netID Identifier (TPID)
 
 A CMP can retrieve the netID Identifier (TPID) via the following
 interface:
@@ -31,13 +31,11 @@ Content-Type: application/vnd.netid.identification.tpid-read-v1+json
 }
 ```
 
-#### JSON Properties
+### JSON Properties
 
-##### tpid
-
-The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null.
-
-##### status
+| |Description|
+|---|---|
+| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
 
 | status | meaning | tc oder pid??? @andrea |
 | ----------- | ----------- | ----------- |
@@ -46,7 +44,7 @@ The ID of the netID user (`tpid`). Only if consent "Identification" is given, th
 | TOKEN_ERROR | Authentication token (JWT) has expired or is invalid. | - |
 | CONSENT_REQUIRED | Consent for passing on the TPID missing ("Identification"). | x |
 
-### Read permission (Identification, TC string)
+## Read permission (Identification, TC string)
 
 ``` shell
 GET https://READSERVICE.netid.de/permissions/iab-permissions?token=<TOKEN>
@@ -64,17 +62,12 @@ Content-Type: application/vnd.netid.permissions.iab-permission-read-v1+json
 }
 ```
 
-#### JSON Properties
+### JSON Properties
 
-##### tpid
-
-The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null.
-
-##### tc
-
-The TC string stored for this `tpid` for this publisher (TCF 2.0). Only with status "OK". Otherwise null.
-
-##### status
+| |Description|
+|---|---|
+| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
+| tc | The TC string stored for this `tpid` for this publisher (TCF 2.0). Only with status "OK". Otherwise null. |
 
 | status | significance | tc | pid |
 | ----------- | ----------- | ----------- | ----------- |
@@ -83,7 +76,7 @@ The TC string stored for this `tpid` for this publisher (TCF 2.0). Only with sta
 | TOKEN_ERROR | Authentication token (JWT) has expired or is invalid. | - | - |
 | CONSENT_REQUIRED | Consent for passing on the `tpid` missing ("Identification"). | x | - |
 
-### Writing the permission (identification, TC string)
+## Writing the permission (identification, TC string)
 
 ``` shell
 POST https://WRITESERVICE.netid.de/permissions/iab-permissions?token=<TOKEN>
@@ -110,23 +103,20 @@ Remarks:
 - If only the TC string is to be updated and the permission "Identification" already exists, only the "tc" attribute can be passed. Both can also be written at the same time.
 - In case of revocation of permission "Identification", would pass only "identification: false".
 
-#### JSON Properties
+### JSON Properties
 
-##### request
+**request**
 
-###### identification
-The permission "Identification" (ID CONSENT) is to be stored (or not).
+| |Description|
+|---|---|
+| identification | The permission "Identification" (ID CONSENT) is to be stored (or not). |
+| tc | The TC String which should be stored for this TPID for this publisher (TCF 2.0). |
 
-###### tc
-The TC String which should be stored for this TPID for this publisher (TCF 2.0).
+**response**
 
-##### response
-
-###### tpid
-
-The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null.
-
-###### status
+| |Description|
+|---|---|
+| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
 
 | status | significance |
 | ----------- | ----------- |

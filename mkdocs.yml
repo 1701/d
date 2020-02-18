@@ -29,7 +29,7 @@ nav:
     - CMP Integration:
         - General information: cmp_1.md
         - Browser-based API: cmp_2.md
-        - APIs server-based: cmp_3.md
+        - Server-based API: cmp_3.md
         - Data export for partners: cmp_4.md
     - Plugins: plugins.md
     - FAQ: faq.md
