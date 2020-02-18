@@ -37,12 +37,12 @@
 
 ## PlantUML -> Diagrams
 
-- Install Java 'brew cask install adoptopenjdk'
-- Install "PlantUML" -> 'brew install plantuml'
-- Install MkDocs PlantUML Plugin: pip3 install mkdocs-build-plantuml-plugin (https://github.com/christo-ph/mkdocs_build_plantuml)
-- Generate PlantUML Source Files in /docs/diagrams/src/filename.puml
-- When starting with mkdocs serve, it will create all diagrams initially.
-- Integrate Output File in ".md" -> ![file](diagrams/out/filename.svg)
+- Install Java `brew cask install adoptopenjdk`
+- Install "PlantUML" -> `brew install plantuml`
+- Install MkDocs PlantUML Plugin: `pip3 install mkdocs-build-plantuml-plugin` (https://github.com/christo-ph/mkdocs_build_plantuml)
+- Generate PlantUML Source Files in `/docs/diagrams/src/filename.puml`
+- When starting with `mkdocs serve`, it will create all diagrams initially.
+- Integrate Output File in ".md" -> `![file](diagrams/out/filename.svg)`
 
 ## Mermaid -> Diagrams
 
