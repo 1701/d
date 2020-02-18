@@ -11,9 +11,9 @@ theme:
   palette:
     primary: '#76B82A'
     accent: '#545454'
-  font: false
-    # text: 'IBM Plex Sans'
-    # code: 'Roboto Mono'
+  font: 
+    text: 'IBM Plex Sans'
+    code: 'Roboto Mono'
   logo: 'images/logo.png'
   custom_dir: custom_theme/
   
