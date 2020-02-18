@@ -5,6 +5,7 @@ This documentation describes the netID Single Sign-On to support the integration
 ## Integration Guide
 
 ### General Overview
+
 The protocol standard applied is OpenID Connect as per the OpenID Connect Core 1.0 specification using the Authorization Code Flow.
 
 Partners manage their data and clients in the netID Developer Portal. There, partners are able to manage their services, which may constitute groups of clients. These services receive the rights granted to partners by end users, which all clients in the group then have access to.
@@ -42,6 +43,7 @@ Claims and scopes that are not requested as essential are ignored.
 ## Examples
 
 ### authorize
+
 authorize requests initiate SSO processes, the clients identify themselves with their client_id and redirect_uri and specify which claims and scopes are to be requested. Some optional parameters are also supported.
 
 Here, the endpoint https://broker.netid.de/authorize is used with the SSO broker.
@@ -105,11 +107,13 @@ curl -v -u [user:pass] -X POST https://broker.netid.de/token -H 'content-type: a
 ```
 
 ### userinfo
+
 The access token is used to retrieve userinfo and id_token.
 
 Here, the endpoint https://broker.netid.de/userinfo is used with the SSO broker.
 
 ## Timing and Error Messages
+
 If the authorize request fails, the redirect_uri in the callback is given the reason why this occurred.
 
 With token requests, it's particularly important to ensure that the code provided is identical bit-by-bit to the one received in the callback to the redirect_uri, and to be able to assume that basic authentication is being used properly here. Each code is only valid for 30 seconds!
@@ -117,6 +121,7 @@ With token requests, it's particularly important to ensure that the code provide
 Access tokens for the userinfo request are valid for 15 minutes and may also be used multiple times within this timeframe.
 
 ## Implementation Details
+
 The following request parameters are supported for initiating the SSO process:
 
 * *prompt*
@@ -161,9 +166,8 @@ Detailed description of diagram:
 
 The depiction of the netID button is explained in the brand book.
 
-
-
 ## Best Practices
+
 It is largely up to the relying parties to decide where netID is to be incorporated in clients.
 
 Typical cases involve the use of netID as a login or data enrichment mechanism.
@@ -184,6 +188,7 @@ One thing to be aware of is the verification status of email addresses: if an em
 - netID exclusively supports the Authorization Code Flow, so that id_token is only transferred in TLS-secured back-end to back-end communication. Currently, the only token signature supported is none.
 
 ## Use of SDKs
+
 There are a large number of OpenID Connect client libraries available in many different language environments. Below, several examples will be given, along with tips for using them.
 
 Many client libraries are listed at https://openid.net/developers/libraries/, and others are easy to find.

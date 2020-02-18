@@ -84,8 +84,7 @@ plugins:
     # Override CSS      
 extra_css:
   - 'stylesheets/extra.css'
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.css
 
 # JS 
 extra_javascript:
-  - https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js
+  - 'https://unpkg.com/mermaid@8.4.6/dist/mermaid.min.js'
