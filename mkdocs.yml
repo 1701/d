@@ -24,7 +24,10 @@ theme:
 # Site Navigation
 nav:
     - About : index.md
-    - Developer Portal: doc_devp.md
+    - Developer Portal:
+        - Account Administration: doc_devp_1.md
+        - Service and Clients: doc_devp_2.md
+        - KPI Reports: doc_devp_3.md
     - SSO Integration: doc_sso_developer.md
     - CMP Integration:
         - General information: cmp_1.md
