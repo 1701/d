@@ -13,7 +13,7 @@
         <meta name="description" content="Test für neue Doku">
       
       
-        <link rel="canonical" href="https://1701.github.io/d/doc_devp/">
+        <link rel="canonical" href="https://1701.github.io/d/doc_devp_3/">
       
       
         <meta name="author" content="mste">
@@ -42,7 +42,7 @@
     
     
       
-        <title>Developer Portal - EnID Developer Zone</title>
+        <title>KPI Reports - EnID Developer Zone</title>
       
     
     
@@ -127,7 +127,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#creating-a-netid-service" tabindex="1" class="md-skip">
+      <a href="#reports" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -153,7 +153,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Developer Portal
+                KPI Reports
               
             </span>
           
@@ -235,6 +235,51 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Developer Portal
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Developer Portal
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../doc_devp_1/" title="Account Administration" class="md-nav__link">
+      Account Administration
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../doc_devp_2/" title="Service and Clients" class="md-nav__link">
+      Service and Clients
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -243,11 +288,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        Developer Portal
+        KPI Reports
       </label>
     
-    <a href="./" title="Developer Portal" class="md-nav__link md-nav__link--active">
-      Developer Portal
+    <a href="./" title="KPI Reports" class="md-nav__link md-nav__link--active">
+      KPI Reports
     </a>
     
       
@@ -261,36 +306,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-service" class="md-nav__link">
-    Creating a Service
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-client" class="md-nav__link">
-    Creating a Client
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usw" class="md-nav__link">
-    USW
+  <a href="#general-information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reports-in-the-netid-developer-portal" class="md-nav__link">
+    Reports in the netID Developer Portal
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-reports" class="md-nav__link">
+    Download Reports
+  </a>
   
 </li>
       
@@ -302,6 +347,11 @@
   
 </nav>
     
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -434,36 +484,36 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#prerequisites" class="md-nav__link">
-    Prerequisites
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-service" class="md-nav__link">
-    Creating a Service
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#creating-a-client" class="md-nav__link">
-    Creating a Client
+  <a href="#overview" class="md-nav__link">
+    Overview
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#usw" class="md-nav__link">
-    USW
+  <a href="#general-information" class="md-nav__link">
+    General Information
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reports-in-the-netid-developer-portal" class="md-nav__link">
+    Reports in the netID Developer Portal
   </a>
   
 </li>
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-reports" class="md-nav__link">
+    Download Reports
+  </a>
   
 </li>
       
@@ -484,36 +534,88 @@
               
                 
                 
-                <h1 id="creating-a-netid-service">Creating a netID Service<a class="headerlink" href="#creating-a-netid-service" title="Permanent link">&para;</a></h1>
-<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
-<p>We assume that you have already registered a service provider account at netID. If not, register a netID developer account <a href="https://developer.netid.de/">https://developer.netid.de/</a> here.</p>
-<h2 id="creating-a-service">Creating a Service<a class="headerlink" href="#creating-a-service" title="Permanent link">&para;</a></h2>
-<p>To start, log in into the <a href="https://developer.netid.de/login">netID Developer Portal</a>. Create a <strong>service</strong> for which you want to leverage the netID single sign-on. Select <strong>Services</strong> in the menu, 
-click <strong>Add service</strong> and fill in the required details in the following screen. Read the detailed documentation if you need further information.</p>
-<p>A sample service could look like this, where the service domain (Dienst Domain) is the domain of your customer facing website. 
-Also, links to data privacy information (URL Datenrichtlinien) and terms of usage (URL AGB / Benutzungsbedingungen) should be supplied:</p>
-<p><img alt="netid" src="../images/netid_create-service-00.png" /></p>
-<div class="admonition alert">
-<p>Note: for testing purposes, you can actually enter any domain and URL values into this form, as they are not technically relevant in order to get the netID integration in Auth0 running</p>
-</div>
-<p>In the end, it should look similar to this:</p>
-<p><img alt="netid" src="../images/netid_create-service-01.png" /></p>
-<h2 id="creating-a-client">Creating a Client<a class="headerlink" href="#creating-a-client" title="Permanent link">&para;</a></h2>
-<p>Create a Client for this service by clicking on Client hinzufügen (Add client). 
-Detailed documation on how to do this is available in the netID Developer Portal. </p>
-<p>Sample configuration:</p>
-<p><img alt="netid" src="../images/netid_create-client-sample.png" /></p>
-<div class="admonition alert">
-<p>Note: the values here should be adjusted to your needs, especially "Callback URL", which needs to point to your backend</p>
-</div>
-<p>In the end, it should look similar to this:</p>
-<p><img alt="netid" src="../images/netid_create-client-02-new.png" /></p>
-<p>Once the client is created it will initially run in a sandboxed mode, which means it can only be used with whitelisted netID-Accounts (email addresses).</p>
-<p>In order to successfully run through the initial integration add a test user (email address) to the whitelist by selecting <strong>Add Test-Account</strong>, 
-outlined on the developer portal. Up to 10 accounts can be whitelisted per sandboxed client.</p>
-<p>Finally, find the <strong>Client ID</strong> and <strong>netID Token - Sandbox</strong> (later referred to as <strong>client secret</strong>) by expanding the client details. </p>
-<p><img alt="netid" src="../images/netid_client-details-01-new.png" /></p>
-<h3 id="usw">USW<a class="headerlink" href="#usw" title="Permanent link">&para;</a></h3>
+                <h1 id="reports">Reports<a class="headerlink" href="#reports" title="Permanent link">&para;</a></h1>
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>The netID Developer Portal provides KPIs in individual reports as .cvs files for you to download. Here you can find an overview of the reports provided by the netID Developer Portal.</p>
+<h3 id="general-information">General Information<a class="headerlink" href="#general-information" title="Permanent link">&para;</a></h3>
+<ul>
+<li><strong>Reporting interval</strong>: daily</li>
+<li><strong>Aggregates</strong>: Rolling time windows, aggregated to 1 day, 7 days, 30 days</li>
+<li><strong>Reporting period</strong>: A report contains a maximum of 366 days</li>
+<li>Reports are calculated for the partner and each of his existing Relying Party. Each Relying Party will have its figures and the figures of its partner displayed as a sum.</li>
+</ul>
+<h3 id="reports-in-the-netid-developer-portal">Reports in the netID Developer Portal<a class="headerlink" href="#reports-in-the-netid-developer-portal" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Report</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Authentication Dialog</td>
+<td>This report shows how many netID users wanted to register with netID and successfully entered their e-mail address for identification on the login page.</td>
+</tr>
+<tr>
+<td>Authentication Process</td>
+<td>The report provides information on how many netID users have completed the authentication process by entering a password. The report shows both successful and unsuccessful authentications.</td>
+</tr>
+<tr>
+<td>Authentication Process Core Data</td>
+<td>The report provides information about which master data was transferred in the authorization process. For each master data, it shows how often "required and optional" (as a total) or only optional master data was transferred in the authorization process.</td>
+</tr>
+<tr>
+<td>Note: This report only contains daily aggregates.</td>
+<td></td>
+</tr>
+<tr>
+<td>Authorization Dialog</td>
+<td></td>
+</tr>
+<tr>
+<td>Authorization Process</td>
+<td></td>
+</tr>
+<tr>
+<td>Broker Dialog</td>
+<td></td>
+</tr>
+<tr>
+<td>Broker "new netID User" Dialog</td>
+<td></td>
+</tr>
+<tr>
+<td>Broker Process</td>
+<td></td>
+</tr>
+<tr>
+<td>Broker master data transfer</td>
+<td></td>
+</tr>
+<tr>
+<td>Registration Neutral Instance Dialog</td>
+<td></td>
+</tr>
+<tr>
+<td>Registration Neutral Instance Process</td>
+<td></td>
+</tr>
+<tr>
+<td>SSO active user</td>
+<td></td>
+</tr>
+<tr>
+<td>SSO user</td>
+<td></td>
+</tr>
+<tr>
+<td>SSO user first use</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="download-reports">Download Reports<a class="headerlink" href="#download-reports" title="Permanent link">&para;</a></h2>
                 
                   
                 
