@@ -17,9 +17,8 @@ The netID Developer Portal provides KPIs in individual reports as .cvs files for
 |---|---|
 | Authentication Dialog | This report shows how many netID users wanted to register with netID and successfully entered their e-mail address for identification on the login page. |
 | Authentication Process | The report provides information on how many netID users have completed the authentication process by entering a password. The report shows both successful and unsuccessful authentications. |
-| Authentication Process Core Data | The report provides information about which master data was transferred in the authorization process. For each master data, it shows how often "required and optional" (as a total) or only optional master data was transferred in the authorization process.
-Note: This report only contains daily aggregates. |
-| Authorization Dialog |  |
+| Authentication Process Core Data | The report provides information about which master data was transferred in the authorization process. For each master data, it shows how often "required and optional" (as a total) or only optional master data was transferred in the authorization process. **Note:** This report only contains **daily aggregates**. |
+| Authorization Dialog | The report provides information on the frequency of the master data dialog. The dialogue is played out if -  the netID user logs on to the Relying Party for the first time - the Relying Party requires new / different netID User master data - the Relying Party wants to play the master data dialog again.  **Note:** Unique users are also shown.  |
 | Authorization Process |  |
 | Broker Dialog |  |
 | Broker "new netID User" Dialog |  |
