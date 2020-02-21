@@ -20,6 +20,16 @@ In the end, it should look similar to this:
 
 ![netid](images/netid_create-service-01.png)
 
+## Activate a Service
+
+## Edit a Service
+
+## Delete a Service
+
+## Reactivate a Service
+
+# Creating a netID Client
+
 ## Creating a Client 
 
 Create a Client for this service by clicking on Client hinzufügen (Add client). 
@@ -46,4 +56,10 @@ Finally, find the **Client ID** and **netID Token - Sandbox** (later referred to
 ![netid](images/netid_client-details-01-new.png)
 
 
-### USW
+## Edit a Client
+
+## Deactivate a Client
+
+## Delete a Client
+
+## Reactivate a Client
