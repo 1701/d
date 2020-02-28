@@ -25,8 +25,12 @@ theme:
 nav:
     - About : index.md
     - Developer Portal:
-        - Account Administration: doc_devp_1.md
-        - Service and Clients: doc_devp_2.md
+        - Getting started: devportal/get_started.md
+        - Tutorials:
+            - Services: devportal/tutorial/services.md
+            - Clients: devportal/tutorial/clients.md
+            - User Management: devportal/tutorial/users.md
+            - Test User: devportal/tutorial/testuser.md
         - KPI Reports: doc_devp_3.md
     - SSO Integration: doc_sso_developer.md
     - CMP Integration:
