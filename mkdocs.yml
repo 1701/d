@@ -16,6 +16,8 @@ theme:
     code: 'Roboto Mono'
   logo: 'images/logo.png'
   custom_dir: custom_theme/
+  #feature:
+    #tabs: true
   
 # Github Repo
 # repo_name: '1701/d'
@@ -23,7 +25,7 @@ theme:
 
 # Site Navigation
 nav:
-    - About : index.md
+    - About netID : index.md
     - Developer Portal:
         - Getting started: devportal/get_started.md
         - Tutorials:
