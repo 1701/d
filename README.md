@@ -24,6 +24,7 @@
     - .gitignore
         - /site Folder
         - **/.DS_Store
+        - .vscode/settings.json
 - gh-pages Branch
     - MkDocs HTML Site Structure
       - git add/commit/push via 'mkdocs gh-deploy' command
