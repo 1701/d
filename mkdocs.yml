@@ -31,7 +31,7 @@ nav:
             - Clients: devportal/tutorial/clients.md
             - User Management: devportal/tutorial/users.md
             - Test User: devportal/tutorial/testuser.md
-        - KPI Reports: doc_devp_3.md
+        - KPI Reports: devportal/reporting.md
     - SSO Integration: doc_sso_developer.md
     - CMP Integration:
         - General information: cmp_1.md
