@@ -16,8 +16,8 @@ theme:
     code: 'Roboto Mono'
   logo: 'images/logo.png'
   custom_dir: custom_theme/
-  #feature:
-    #tabs: true
+  feature:
+    tabs: true
   
 # Github Repo
 # repo_name: '1701/d'
