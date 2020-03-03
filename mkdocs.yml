@@ -41,6 +41,7 @@ nav:
         - Server-based API: cmp_3.md
         - Data export for partners: cmp_4.md
     - Plugins: plugins.md
+    - Glossary: glossary.md
     - FAQ: faq.md
 
 # Extensions

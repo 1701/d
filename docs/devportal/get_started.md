@@ -1,4 +1,4 @@
-# Get Started
+# Getting Started
 
 The netID Developer Portal is the main application for developers who want to connect their online services as netID Partner to the Single Sign on service netID.
 
