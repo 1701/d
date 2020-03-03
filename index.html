@@ -38,7 +38,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.3">
     
     
       
@@ -46,7 +46,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -57,7 +57,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
      
   
@@ -102,7 +102,7 @@
 
     <link rel="stylesheet" href="assets/fonts/material-icons.css">
     
-      <link rel="manifest" href="manifest.webmanifest">
+      <link rel="manifest" type="application/manifest+json" href="manifest.webmanifest" crossorigin="use-credentials">
     
     
       <link rel="stylesheet" href="stylesheets/extra.css">
@@ -127,7 +127,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#about-netid" tabindex="1" class="md-skip">
+      <a href="#about-netid" tabindex="0" class="md-skip">
         Skip to content
       </a>
     
@@ -136,9 +136,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://1701.github.io/d/" title="EnID Developer Zone" class="md-header-nav__button md-logo">
+        <a href="https://1701.github.io/d/" title="EnID Developer Zone" aria-label="EnID Developer Zone" class="md-header-nav__button md-logo">
           
-            <img src="images/logo.png" width="24" height="24">
+            <img alt="logo" src="images/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -153,7 +153,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                About
+                About netID
               
             </span>
           
@@ -167,7 +167,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -197,6 +197,60 @@
         
       
       
+        
+
+<nav class="md-tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="." class="md-tabs__link md-tabs__link--active">
+        About netID
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="devportal/get_started/" class="md-tabs__link">
+          Developer Portal
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="cmp_1/" class="md-tabs__link">
+          CMP Integration
+        </a>
+      
+    </li>
+  
+
+      
+        
+      
+        
+      
+        
+      
+    </ul>
+  </div>
+</nav>
+      
       <main class="md-main" role="main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -208,7 +262,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://1701.github.io/d/" title="EnID Developer Zone" class="md-nav__button md-logo">
       
-        <img src="images/logo.png" width="48" height="48">
+        <img alt="logo" src="images/logo.png" width="48" height="48">
       
     </a>
     EnID Developer Zone
@@ -231,11 +285,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        About
+        About netID
       </label>
     
-    <a href="." title="About" class="md-nav__link md-nav__link--active">
-      About
+    <a href="." title="About netID" class="md-nav__link md-nav__link--active">
+      About netID
     </a>
     
       
@@ -251,13 +305,6 @@
         <li class="md-nav__item">
   <a href="#european-netid-foundation-enid" class="md-nav__link">
     European netID Foundation (EnID)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#developer-zone" class="md-nav__link">
-    Developer Zone
   </a>
   
 </li>
@@ -516,6 +563,18 @@
 
 
   <li class="md-nav__item">
+    <a href="glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
     <a href="faq/" title="FAQ" class="md-nav__link">
       FAQ
     </a>
@@ -545,13 +604,6 @@
         <li class="md-nav__item">
   <a href="#european-netid-foundation-enid" class="md-nav__link">
     European netID Foundation (EnID)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#developer-zone" class="md-nav__link">
-    Developer Zone
   </a>
   
 </li>
@@ -597,8 +649,6 @@
                 <h1 id="about-netid">About netID<a class="headerlink" href="#about-netid" title="Permanent link">&para;</a></h1>
 <h2 id="european-netid-foundation-enid">European netID Foundation (EnID)<a class="headerlink" href="#european-netid-foundation-enid" title="Permanent link">&para;</a></h2>
 <p>The European netID Foundation was founded in March 2018 by Mediengruppe RTL Deutschland, ProSiebenSat.1 and United Internet. Its aim is to establish the netID single sign-on as a European alternative to US providers. With netID, users can organize their consent to the use of internet services (opt-ins) transparently and in compliance with data protection regulations. To this end, the foundation has developed an open standard that enables users from all sectors to access all internet services of partners of the European netID Foundation with the same log-in. Right from the start which focuses the initial core market Germany, 38 million accounts covering roughly about 60% of the Germany online population are ready to be used.</p>
-<h2 id="developer-zone">Developer Zone<a class="headerlink" href="#developer-zone" title="Permanent link">&para;</a></h2>
-<p>In this Developer Zone you will receive all information, assistance and answers regarding the login standard netID, the EnID foundation, the advantages for your websites and of course the integration of the login standard on your websites and the registration and use of the Developer Portal.</p>
 <h2 id="developer-portal">Developer Portal<a class="headerlink" href="#developer-portal" title="Permanent link">&para;</a></h2>
 <p>The netID Developer Portal is the main contact point for developers who want to connect their online services as netID Partner to the Single Sign on service netID.</p>
 <p>The Developer Portal provides developers with information for a smooth integration.</p>
@@ -686,7 +736,7 @@
 
     </div>
     
-      <script src="assets/javascripts/application.808e90bb.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
         
         

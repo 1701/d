@@ -5,6 +5,10 @@
     color: #545454;
 }
 
+.md-typeset__table {
+  min-width: 100%;
+}
+
 .md-typeset h1[id] .headerlink:focus, .md-typeset h1[id]:hover .headerlink:hover, .md-typeset h1[id]:target .headerlink {
     color:#76b82a;
 }
@@ -17,6 +21,27 @@
     color:#76b82a;
 }
 
+.md-tabs {
+  width: 100%;
+  -webkit-transition: background .25s;
+  transition: background .25s;
+  background-color: #F5F5F5;
+  color: #6E6E6E;
+  font-size: 16px;
+  overflow:auto
+}
+
+.md-tabs__link {
+  display: block;
+  margin-top: .8rem;
+  -webkit-transition: opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
+  transition: opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
+  transition: transform .4s cubic-bezier(.1, .7, .1, 1), opacity .25s;
+  transition: transform .4s cubic-bezier(.1, .7, .1, 1), opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
+  font-size: .7rem;
+  font-weight: bolder;
+  opacity:.7
+}
 
 html .md-nav--primary .md-nav__title--site {
 	position: relative;
