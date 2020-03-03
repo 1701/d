@@ -42,7 +42,7 @@
     
     
       
-        <title>SSO Integration - EnID Developer Zone</title>
+        <title>netID SSO - EnID Developer Zone</title>
       
     
     
@@ -153,7 +153,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                SSO Integration
+                netID SSO
               
             </span>
           
@@ -199,18 +199,23 @@
       
         
 
-<nav class="md-tabs" data-md-component="tabs">
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
-      <a href=".." class="md-tabs__link md-tabs__link--active">
-        About netID
-      </a>
-    
-  </li>
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href=".." class="md-tabs__link">
+          About netID
+        </a>
+      
+    </li>
+  
 
       
         
@@ -227,6 +232,17 @@
 
       
         
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          netID Login
+        </a>
+      
+    </li>
+  
+
       
         
   
@@ -240,8 +256,6 @@
     </li>
   
 
-      
-        
       
         
       
@@ -275,10 +289,58 @@
       
 
 
-  <li class="md-nav__item">
-    <a href=".." title="About netID" class="md-nav__link">
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1">
+    
+    <label class="md-nav__link" for="nav-1">
       About netID
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        About netID
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Home" class="md-nav__link">
+      Home
     </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../glossary/" title="Glossary" class="md-nav__link">
+      Glossary
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../faq/" title="FAQ" class="md-nav__link">
+      FAQ
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
   </li>
 
     
@@ -409,6 +471,27 @@
   
 
 
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      netID Login
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        netID Login
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
   <li class="md-nav__item md-nav__item--active">
     
     <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
@@ -417,11 +500,11 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        SSO Integration
+        netID SSO
       </label>
     
-    <a href="./" title="SSO Integration" class="md-nav__link md-nav__link--active">
-      SSO Integration
+    <a href="./" title="netID SSO" class="md-nav__link md-nav__link--active">
+      netID SSO
     </a>
     
       
@@ -567,6 +650,23 @@
     
   </li>
 
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../plugins/" title="netID Plugins" class="md-nav__link">
+      netID Plugins
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
     
       
       
@@ -637,18 +737,6 @@
         
       </ul>
     </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../plugins/" title="Plugins" class="md-nav__link">
-      Plugins
-    </a>
   </li>
 
     
@@ -1091,8 +1179,8 @@ For go the package GitHub:coreos/go-oidc makes a netID login possible. The packa
 
         <!-- Link to next page -->
         
-          <a href="../cmp_1/"
-              title="General information"
+          <a href="../plugins/"
+              title="netID Plugins"
               class="md-flex md-footer-nav__link md-footer-nav__link--next"
               rel="next">
             <div class="md-flex__cell md-flex__cell--stretch
@@ -1101,7 +1189,7 @@ For go the package GitHub:coreos/go-oidc makes a netID login possible. The packa
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                General information
+                netID Plugins
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">

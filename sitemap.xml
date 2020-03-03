@@ -6,6 +6,16 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://1701.github.io/d/glossary/</loc>
+     <lastmod>2020-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
+     <loc>https://1701.github.io/d/faq/</loc>
+     <lastmod>2020-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://1701.github.io/d/devportal/get_started/</loc>
      <lastmod>2020-03-03</lastmod>
      <changefreq>daily</changefreq>
@@ -41,6 +51,11 @@
      <changefreq>daily</changefreq>
     </url>
     <url>
+     <loc>https://1701.github.io/d/plugins/</loc>
+     <lastmod>2020-03-03</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+    <url>
      <loc>https://1701.github.io/d/cmp_1/</loc>
      <lastmod>2020-03-03</lastmod>
      <changefreq>daily</changefreq>
@@ -57,11 +72,6 @@
     </url>
     <url>
      <loc>https://1701.github.io/d/cmp_4/</loc>
-     <lastmod>2020-03-03</lastmod>
-     <changefreq>daily</changefreq>
-    </url>
-    <url>
-     <loc>https://1701.github.io/d/plugins/</loc>
      <lastmod>2020-03-03</lastmod>
      <changefreq>daily</changefreq>
     </url>
