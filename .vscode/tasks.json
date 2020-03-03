@@ -7,6 +7,11 @@
             "label": "run webserver",
             "type": "shell",
             "command": "python -m http.server"
+        },
+        {
+            "label": "upload site directory",
+            "type": "shell",
+            "command": "mkdocs gh-deploy"
         }
     ]
 }
