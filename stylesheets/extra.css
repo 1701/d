@@ -19,6 +19,11 @@
   opacity:.7
 }
 
+.md-tabs__link--active, .md-tabs__link:hover {
+  color: inherit;
+  opacity:1
+}
+
 .md-search__input {
 	background-color:  #76b82a;
 
