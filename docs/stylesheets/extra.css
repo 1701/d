@@ -6,11 +6,8 @@
 }
 
 .md-tabs {
-  width: 100%;
-  -webkit-transition: background .25s;
-  transition: background .25s;
   background-color: #F5F5F5;
-  color: #6E6E6E;
+  color: #545454;
   font-size: 16px;
   overflow:auto
 }
