@@ -36,14 +36,9 @@
 }
 
 .md-tabs__link {
-  display: block;
   margin-top: .8rem;
-  -webkit-transition: opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
-  transition: opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
-  transition: transform .4s cubic-bezier(.1, .7, .1, 1), opacity .25s;
-  transition: transform .4s cubic-bezier(.1, .7, .1, 1), opacity .25s, -webkit-transform .4s cubic-bezier(.1, .7, .1, 1);
   font-size: .7rem;
-  font-weight: bolder;
+  font-weight: bold;
   opacity:.7
 }
 
