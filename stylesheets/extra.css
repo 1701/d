@@ -20,21 +20,29 @@
 }
 
 .md-tabs__link--active, .md-tabs__link:hover {
-  color: inherit;
+  /*color: inherit;*/
+  color: #76b82a;
+  font-weight: bolder;
   opacity:1
 }
 
 .md-search__input {
-	background-color:  #76b82a;
-
+  /*
+  background-color:  #76b82a;
+  border-bottom:.05rem solid #76b82a;
+  */
+  background-color:  #fff
 }
 
+/*
 .md-search__input:hover {
-	background-color:#a9eb5d;
+	background-color:#F5F5F5;
 }
+*/
 
 .md-search__input::placeholder {
-	color:hsla(0, 0%, 100%, 1);
+  /*color:hsla(0, 0%, 100%, 1);*/
+  color:#545454;
 }
 
 /* Content */
