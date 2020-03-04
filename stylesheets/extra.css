@@ -5,6 +5,10 @@
     color: #545454;
 }
 
+.md-typeset img {
+  box-shadow:0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)
+}
+
 .md-typeset__table {
   min-width: 100%;
 }
@@ -130,9 +134,3 @@ html .md-footer-meta.md-typeset a:focus, html .md-footer-meta.md-typeset a:hover
 .md-typeset .admonition.info, .md-typeset .admonition.todo, .md-typeset details.info, .md-typeset details.todo {
   border-left-color:#76b82a;
 }
-
-.md-typeset img {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-  
