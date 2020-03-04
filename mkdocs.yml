@@ -25,7 +25,10 @@ theme:
 
 # Site Navigation
 nav:
-    - About netID : index.md
+    - About netID:
+        - Home: index.md
+        - Glossary: glossary.md
+        - FAQ: faq.md
     - Developer Portal:
         - Getting started: devportal/get_started.md
         - Tutorials:
@@ -34,13 +37,14 @@ nav:
             - User Management: devportal/tutorial/users.md
             - Test User: devportal/tutorial/testuser.md
         - KPI Reports: devportal/reporting.md
-    - SSO Integration: doc_sso_developer.md
+    - netID Login: 
+        - netID SSO: doc_sso_developer.md
+        - netID Plugins: plugins.md
     - CMP Integration:
         - General information: cmp_1.md
         - Browser-based API: cmp_2.md
         - Server-based API: cmp_3.md
         - Data export for partners: cmp_4.md
-    - Plugins: plugins.md
     - Glossary: glossary.md
     - FAQ: faq.md
 
