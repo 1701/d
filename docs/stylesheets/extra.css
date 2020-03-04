@@ -22,6 +22,7 @@
 .md-tabs__link--active, .md-tabs__link:hover {
   /*color: inherit;*/
   color: #76b82a;
+  font-weight: bolder;
   opacity:1
 }
 
@@ -30,8 +31,7 @@
   background-color:  #76b82a;
   border-bottom:.05rem solid #76b82a;
   */
-  background-color:  #fff;
-
+  background-color:  #fff
 }
 
 /*
