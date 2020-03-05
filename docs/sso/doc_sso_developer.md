@@ -136,7 +136,7 @@ The following request parameters are supported for initiating the SSO process:
 
 The sequence of the calls is summarized as follows:
 
-![High Level Authentication Code Flow](diagrams/out/seq_sso_overview.svg)
+![High Level Authentication Code Flow](../diagrams/out/seq_sso_overview.svg)
 
 Detailed description of diagram:
   

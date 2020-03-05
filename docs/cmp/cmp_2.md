@@ -4,7 +4,7 @@ Description of the browser-based integration of the netID Permission
 Center by the CMP (integration directly in the user\'s browser
 (JavaScript)).
 
-![Browser based API](diagrams/out/seq_cmp_webapi.svg)
+![Browser based API](../diagrams/out/seq_cmp_webapi.svg)
 
 ## Exemplary Procedure for obtaining Consents
 

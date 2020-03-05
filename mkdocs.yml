@@ -1,6 +1,6 @@
 # Project information
-site_name: 'EnID Developer Zone'
-site_description: 'Test für neue Doku'
+site_name: 'netID Developer Zone'
+site_description: 'Developer Zone for netID, the european login standard of the European netID Foundation.'
 site_author: 'mste'
 site_url: 'https://1701.github.io/d/'
 
@@ -38,13 +38,14 @@ nav:
             - Test User: devportal/tutorial/testuser.md
         - KPI Reports: devportal/reporting.md
     - netID Login Integration: 
-        - netID SSO: doc_sso_developer.md
-        - netID Plugins: plugins.md
+        - netID SSO: sso/doc_sso_developer.md
+        - netID Styleguide: sso/styleguide.md
+        - netID Plugins: sso/plugins.md
     - netID CMP Integration:
-        - General information: cmp_1.md
-        - Browser-based API: cmp_2.md
-        - Server-based API: cmp_3.md
-        - Data export for partners: cmp_4.md
+        - General information: cmp/cmp_1.md
+        - Browser-based API: cmp/cmp_2.md
+        - Server-based API: cmp/cmp_3.md
+        - Data export for partners: cmp/cmp_4.md
 
 # Extensions
 markdown_extensions:

@@ -4,7 +4,7 @@ Description of the backend integration of the netID Permission Center by the CMP
 
 In the case of first use and netID registration via the SSO flow, the publisher (TAPP) receives the authentication token (`token`) after the successful login, with which the user can be authenticated at the netID Permission Center. The CMP can use this authentication token to read and write the netID permissions / TC string of the user.
 
-![Server based API](diagrams/out/seq_cmp_api.svg)
+![Server based API](../diagrams/out/seq_cmp_api.svg)
 
 Remarks:
 
