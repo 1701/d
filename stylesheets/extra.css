@@ -19,11 +19,11 @@
   opacity:.7
 }
 
-.md-tabs__link--active, .md-tabs__link:hover {
+.md-tabs__link--active, .md-tabs__link:hover{
   /*color: inherit;*/
   color: #76b82a;
   font-weight: bolder;
-  opacity:1
+  opacity:1;
 }
 
 .md-search__input {
