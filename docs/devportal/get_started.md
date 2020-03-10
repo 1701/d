@@ -54,3 +54,7 @@ An activation code has been sent to the e-mail address provided.
 ## Problems with Login
 
 ![problems login](../images/devportal/netid_dev_portal_problems_login.png)
+
+## Contact us
+
+![login](../images/devportal/netid_dev_portal_contact_us.png)
