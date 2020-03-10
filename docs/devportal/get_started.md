@@ -12,7 +12,9 @@ The following steps will guide you thru the process.
 
 ## Register
 
-- To register for the netID Developer Portal, click on **Create Developer Account**.
+- To register for the netID Developer Portal, click on **Create developer account**.
+
+![reg](../images/devportal/netid_dev_portal_start_page.png)
 
 You will be forwarded to the registration page of the netID Developer Portal.
 
@@ -22,20 +24,24 @@ You will be forwarded to the registration page of the netID Developer Portal.
 !!! info  ""
     A strong password does not need to be changed regularly. However, it should consist of at least 8 characters, better 12 or more. The longer your password, the harder it is to crack. Also mix letters, numbers and special characters and switch between upper and lower case.
 
--  Confirm your password by repeating the entry and then click on **Continue**.
+-  Confirm your password by repeating the entry and then click on **Next**.
 
 ![reg step 1](../images/devportal/netid_dev_portal_register_step_one.png)
 
 -  Fill out the form with your personal data.
 -  Confirm that you have read and accept the user conditions. 
--  Click on **complete registration**.
-   
+-  Click on **Complete registration**.
+
+![reg step 2](../images/devportal/netid_dev_portal_register_step_two.png)
+
 An activation code has been sent to the e-mail address provided.
 
 !!! info ""
     If you did not receive an e-mail from us during registration, please contact our support address: support@developer.netid.de
 
--  Enter the activation code in the input field on the netID Developer Portal web page and click Complete Activation.
+-  Enter the activation code in the input field on the netID Developer Portal web page and click **Complete activation**.
+
+![reg step 3](../images/devportal/netid_dev_portal_register_step_three.png)
 
 !!! info ""
     You have successfully registered on the netID Developer Portal.
@@ -43,7 +49,6 @@ An activation code has been sent to the e-mail address provided.
 ## Login
 
 ![login](../images/devportal/netid_dev_portal_login.png)
-
 
 
 ## Problems with Login
