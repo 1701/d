@@ -3,3 +3,4 @@ site/
 .vscode/settings.json 
 .vscode/tasks.json
 .vscode/ws.code-workspace
+docs/diagrams/out/
