@@ -4,7 +4,7 @@ In addition to the Single Sign-on, netID Partners can also leverage netID to all
 
 To enable that netID (here specifically netID Permission Center) provides the following services to integrate a netID Partners Consent Management Platform. Overall these APIs enable a Partner/his CMP to manage a TC-String associated to an individual user as well as netID specific consents (netID Permissions) which allow him to identity a user while using his services.
 
-!!! note  ""
+!!! info  ""
     All permissions (netID specific/TCF) stored/managed using netID are always scoped to an individual netID Partner. That means in terms of the CMP, that netID solely supports service scoped TC-Strings, and more importantly that the user’s explicit consent to be identified is managed/given per netID Partner   
 
 ## netID Permission Center Services

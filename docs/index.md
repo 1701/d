@@ -24,9 +24,8 @@ netID Account Providers are in charge for authentication, authorization and tran
 
 In addition to the Single Sign-on netID Partners can also leverage netID to allow their users to manage their overall privacy settings in terms of commercial data use and offers a convenient, scalable and most importantly server-based/permanent way to manage a user’s consent status or more generally a status in terms of legal grounds for commercial data use. To enable that netID provides services to integrate a netID Partners Consent Management Platform in addition to its Single Sign-on services. 
 
-!!! warning  ""
-    Please note that the integration in terms of privacy management/commercial data use is not free of charge and cannot be managed via the netID Developer Portal in a self-service fashion. In case you are interested please reach out to us. 
-
+!!! info  ""
+    Please note that the integration in terms of privacy management/commercial data use is not free of charge and cannot be managed via the netID Developer Portal in a self-service fashion. In case you are interested please reach out to us.
 
 ## User base and advantages
 
