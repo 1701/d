@@ -38,9 +38,9 @@ nav:
             - Test User: devportal/tutorial/testuser.md
         - KPI Reports: devportal/reporting.md
     - Single Sign-on Integration: 
-        - netID SSO: sso/doc_sso_developer.md
-        - netID Styleguide: sso/styleguide.md
-        - netID Plugins: sso/plugins.md
+        - Technical Details: sso/doc_sso_developer.md
+        - Styleguide: sso/styleguide.md
+        - Plugins: sso/plugins.md
     - CMP Integration:
         - General information: cmp/index.md
         - Browser-based API: cmp/cmp_2.md
