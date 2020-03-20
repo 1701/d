@@ -736,20 +736,15 @@
                 
                 <h1 id="netid-clients">netID Clients<a class="headerlink" href="#netid-clients" title="Permanent link">&para;</a></h1>
 <h2 id="creating-a-client">Creating a Client<a class="headerlink" href="#creating-a-client" title="Permanent link">&para;</a></h2>
-<p>Create a Client for this service by clicking on Client hinzufügen (Add client). 
-Detailed documation on how to do this is available in the netID Developer Portal. </p>
-<p>Sample configuration:</p>
-<p><img alt="netid" src="../../../images/netid_create-client-sample.png" /></p>
+<p>Create a Client for this service by clicking on Add client.</p>
+<p><img alt="netid" src="../../../images/devportal/netid_dev_portal_add_client.png" /></p>
 <div class="admonition info">
 <p>Note: the values here should be adjusted to your needs, especially "Callback URL", which needs to point to your backend</p>
 </div>
-<p>In the end, it should look similar to this:</p>
-<p><img alt="netid" src="../../../images/netid_create-client-02-new.png" /></p>
 <p>Once the client is created it will initially run in a sandboxed mode, which means it can only be used with whitelisted netID-Accounts (email addresses).</p>
 <p>In order to successfully run through the initial integration add a test user (email address) to the whitelist by selecting <strong>Add Test-Account</strong>, 
 outlined on the developer portal. Up to 10 accounts can be whitelisted per sandboxed client.</p>
 <p>Finally, find the <strong>Client ID</strong> and <strong>netID Token - Sandbox</strong> (later referred to as <strong>client secret</strong>) by expanding the client details. </p>
-<p><img alt="netid" src="../../../images/netid_client-details-01-new.png" /></p>
 <h2 id="edit-a-client">Edit a Client<a class="headerlink" href="#edit-a-client" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Under the appropriate service, select the client to be changed.</li>
