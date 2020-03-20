@@ -48,12 +48,22 @@ An activation code has been sent to the e-mail address provided.
 
 ## Login
 
+Once you have registered yourself you can login with yxpour credentials.
+
 ![login](../images/devportal/netid_dev_portal_login.png)
 
 
 ## Problems with Login
 
+If you did not receive the activation code or forgot your password, click on **Problems loggin in?**
+
+Here you do have the option to reset your password, by clicking **Passowrd reset**
+
+You also have the option to get an activation code, in case you had problems during the registration process. For that, click on **Send activation code**
+
 ![problems login](../images/devportal/netid_dev_portal_problems_login.png)
+
+In any other case, you can contact also directy vial email and phone.
 
 ## Contact us
 
