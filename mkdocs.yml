@@ -43,9 +43,9 @@ nav:
         - Plugins: sso/plugins.md
     - CMP Integration:
         - General information: cmp/index.md
-        - Browser-based API: cmp/cmp_2.md
-        - Server-based API: cmp/cmp_3.md
-        - Data export API: cmp/cmp_4.md
+        - Browser-based API: cmp/browser-based.md
+        - Server-based API: cmp/server-based.md
+        - Data export API: cmp/export.md
 
 # Extensions
 markdown_extensions:

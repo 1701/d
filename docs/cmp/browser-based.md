@@ -1,8 +1,6 @@
-# Browser-based API (web browser integration)
+# Browser-based API (Headless Integration)
 
-Description of the browser-based integration of the netID Permission
-Center by the CMP (integration directly in the user\'s browser
-(JavaScript)).
+Description of the browser-based integration by the CMP (Headless CMP)
 
 ![Browser based API](../diagrams/out/seq_cmp_webapi.svg)
 
