@@ -6,7 +6,11 @@
 
 The e-mail addresses and roles of all active users are listed.
 
+![netid](../../images/devportal/netid_dev_portal_user_management.png)
+
 - Click **Details** next to your user name.
+
+![netid](../../images/devportal/netid_dev_portal_user_details.png)
 
 - Make the desired changes and then confirm your entries by clicking on **Apply changes**.
 
@@ -74,6 +78,9 @@ A developer gets access to all functions that are necessary for the technical im
 The contact data of a contact person is required for contractual agreements or the release of services. You have the possibility to manage all necessary contact person data in the netID Developer Portal.
 
 - To adjust partner data, click on **Company Profile** in the navigation on the left.
+
+![netid](../../images/devportal/netid_dev_portal_company_details.png)
+
 - Under Contact Person Details, adjust all necessary information about the contact person.
 - To save the information, click **Apply Changes**.
 
