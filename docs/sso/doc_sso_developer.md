@@ -1,6 +1,6 @@
 # Single Sign-On Documentation
 
-This documentation describes the netID Single Sign-On to support the integration with interested relying parties. In order to aquire the necessary credentials to leverage this service please refer to the [Developer Portal Documentation](https://asr-enid.github.io/netid-docs/devPortal/services/)
+This documentation describes the netID Single Sign-On to support the integration with interested relying parties. In order to aquire the necessary credentials to leverage this service please refer to the [Developer Portal Documentation](/../devportal/get_started/)
 
 ## Integration Guide
 
