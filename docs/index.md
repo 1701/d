@@ -6,9 +6,12 @@ The European netID Foundation (EnID) was founded in March 2018 by Mediengruppe R
 
 ## Developer Portal
 
-The netID Developer Portal is the main resource for developers/digital services that want to leverage netID with their online services. It provides all the necessary resources and features to integration the netID Single Sign-on. 
+The netID Developer Portal is the main resource for developers/digital services that want to leverage netID with their online services. It provides all the necessary resources and features to integrate the netID Single Sign-on. 
 
 In the future, individual reports, information about planned further developments of the netID and much more will be available in the Developer Portal.
+
+For details see [Developer Portal][1].
+[1]: devportal/get_started.md
 
 ## netID Login Standard
 
@@ -20,12 +23,18 @@ netID Account Providers are in charge for authentication, authorization and tran
 
  Based on the above, visitors and customers can discover and use your digital services and websites leveraging netID in a particularly secure, simple and convenient way. The netID Single Sign-on is provided free of charge and is open for anyone after registration and setup using the afore mentioned netID Developer Portal. 
 
+For details see [Single Sign-On Documentation][2].
+[2]: sso/doc_sso_developer.md
+
 ## netID Privacy Management
 
 In addition to the Single Sign-on netID Partners can also leverage netID to allow their users to manage their overall privacy settings in terms of commercial data use and offers a convenient, scalable and most importantly server-based/permanent way to manage a user’s consent status or more generally a status in terms of legal grounds for commercial data use. To enable that netID provides services to integrate a netID Partners Consent Management Platform in addition to its Single Sign-on services. 
 
 !!! info  ""
     Please note that the integration in terms of privacy management/commercial data use is not free of charge and cannot be managed via the netID Developer Portal in a self-service fashion. In case you are interested please reach out to us.
+
+For details see [CMP Integration][3].
+[3]: cmp/index.md
 
 ## User base and advantages
 
