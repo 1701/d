@@ -1,69 +1,77 @@
 # Getting Started
 
-The netID Developer Portal is the main application for developers who want to connect their online services as netID Partner to the Single Sign on service netID.
+The netID Developer Portal is the main resource for developers/digital services that want to leverage netID with their online services. It provides all the necessary resources and features to integrate the netID Single Sign-on. 
 
-With netID Developer Portal the developer gets all information for a smooth integration.
-
-In the future, individual reports, information about planned further developments of the netID login standard and much more will be available in the Developer Portal.
+In the future, individual reports, information about planned further developments of the netID and much more will be available in the Developer Portal.
 
 In order to use these capabilities, you need to <a href="https://developer.netid.de" target="_blank">register yourself</a>
 
-The following steps will guide you thru the process.
-
+The following steps will guide you through the process.
 ## Register
-
-- To register for the netID Developer Portal, click on **Create developer account**.
+To create an account for the netID Developer Portal, click on **Create developer account**.
 
 ![reg](../images/devportal/netid_dev_portal_start_page.png)
 
-You will be forwarded to the registration page of the netID Developer Portal.
+You will be forwarded to the registration page of the netID Developer Portal. Setting up an account is a three step process 
 
-- Enter your email address.
-- Enter your password.
+1. Account Details - Specify your e-mail address and a strong password
+2. Company Details - Specify company details needed for the netID Single-on (Company operating the services integration the Single Sign-on)
+3. Active Account 
+
+### Account Details
+Fill out the requested details and continue by clicking **Next**
+
+![reg step 1](../images/devportal/netid_dev_portal_register_step_one.png)
+
 
 !!! info  ""
     A strong password does not need to be changed regularly. However, it should consist of at least 8 characters, better 12 or more. The longer your password, the harder it is to crack. Also mix letters, numbers and special characters and switch between upper and lower case.
 
--  Confirm your password by repeating the entry and then click on **Next**.
+### Company Details
 
-![reg step 1](../images/devportal/netid_dev_portal_register_step_one.png)
+Creating a new account also requires you to create an associate company profile, which is the legal entity that operates the services that you are integrating the Single Sign-on into. Fill out the necessary details, read the terms of use and accept the user contract.
 
--  Fill out the form with your personal data.
--  Confirm that you have read and accept the user conditions. 
--  Click on **Complete registration**.
+To complete the registration, click on **Complete registration**.
+
+!!! warning  ""
+    Accepting the user contract requires you to be eligible to act on behalf of your company (as registered in this step). The developer portal supports different roles to address that, namely **Developer** and **Representative**. After finishing the signup process the registered user has the role **Representative**
+
+For Details on Roles/User-Management see [User Management][1].
+
+[1]: tutorial/users.md
 
 ![reg step 2](../images/devportal/netid_dev_portal_register_step_two.png)
 
-An activation code has been sent to the e-mail address provided.
+### Activate Account
+
+Once the  registration has been completed an activation code will be send to the provided e-mail address.
 
 !!! info ""
     If you did not receive an e-mail from us during registration, please contact our support address: support@developer.netid.de
 
--  Enter the activation code in the input field on the netID Developer Portal web page and click **Complete activation**.
+To active your account enter the activation code into the form and click **Complete activation**.
 
 ![reg step 3](../images/devportal/netid_dev_portal_register_step_three.png)
 
-!!! info ""
-    You have successfully registered on the netID Developer Portal.
+## Initial Login
 
-## Login
-
-Once you have registered yourself you can login with yxpour credentials.
+Once you have registered and activated your account you can sign-in with your chosen credentials.
 
 ![login](../images/devportal/netid_dev_portal_login.png)
 
 
-## Problems with Login
+## Troubleshooting Login
 
-If you did not receive the activation code or forgot your password, click on **Problems loggin in?**
+In case you have issues with you login, click **Problems loggin in?**
 
-Here you do have the option to reset your password, by clicking **Passowrd reset**
+The Developer Portal offers you to:
 
-You also have the option to get an activation code, in case you had problems during the registration process. For that, click on **Send activation code**
+- Reset your password, by clicking **Password reset**
+- Resend an activation code, in case you had problems during the registration process. Click **Send activation code**
 
 ![problems login](../images/devportal/netid_dev_portal_problems_login.png)
 
-In any other case, you can contact also directy vial email and phone.
+In any other case, you can also contact support via e-mail or phone.
 
 ## Contact us
 
