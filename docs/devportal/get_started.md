@@ -16,7 +16,7 @@ You will be forwarded to the registration page of the netID Developer Portal. Se
 
 1. Account Details - Specify your e-mail address and a strong password
 2. Company Details - Specify company details needed for the netID Single-on (Company operating the services integration the Single Sign-on)
-3. Active Account 
+3. Activate Account 
 
 ### Account Details
 Fill out the requested details and continue by clicking **Next**
