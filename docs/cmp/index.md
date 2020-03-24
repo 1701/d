@@ -2,14 +2,16 @@
 
 In addition to the Single Sign-on, netID Partners can also leverage netID to allow users to manage their overall privacy settings in terms of commercial data usage. This offers a convenient, scalable and most importantly server-based/permanent way to manage a user’s consent status or more generally a status in terms of legal grounds for commercial data usage. 
 
-To enable that netID (here specifically netID Permission Center) provides the following services to integrate a netID Partners Consent Management Platform. Overall these APIs enable a Partner/his CMP to manage a TC-String associated to an individual user as well as netID specific consents (netID Permissions) which allow him to identity a user while using his services.
+To enable that netID (here specifically the netID Permission Center) provides the following services to integrate a netID Partners Consent Management Platform. Overall these APIs enable a Partner/his CMP to manage a TC-String associated to an individual user as well as netID specific consents (netID Permissions) which allow him to identity a user while using his services.
+
+In the following descriptions we will refer to the user’s overall privacy setting as **privacy status**.
 
 !!! info  ""
     All permissions (netID specific/TCF) stored/managed using netID are always scoped to an individual netID Partner. That means in terms of the CMP, that netID solely supports service scoped TC-Strings, and more importantly that the user’s explicit consent to be identified is managed/given per netID Partner   
 
 ## netID Permission Center Services
 
-The following services are provided by the netID Permission Center to allow a CMP to store / manage netID Permissions, TC Strings for a netID Partner:
+The following services are provided by the netID Permission Center to allow a CMP to store / manage a user’s privacy status for a specific netID Partner:
 
 - READ SERVICE: Read the netID identifier (TPID), netID Permissions and TC Strings for an individual user
 - WRITE SERVICE: Write netID Permissions and TC Strings for an individual user
@@ -17,7 +19,7 @@ The following services are provided by the netID Permission Center to allow a CM
 
 ## Read/Write Services
 
-The READ and WRITE Services rely on prior user authenticating and are provided in two variants, with overall similar functionalities, to the netID Partners Consent Management Platform.
+The READ and WRITE services rely on prior user authenticating and are provided in two variants, with overall similar functionalities, to the netID Partners Consent Management Platform.
 
 ### Functionality
 
@@ -28,7 +30,7 @@ The READ and WRITE Services rely on prior user authenticating and are provided i
 ### Variants
 
 1. **Browser based** API: Usage based on an already established user authentication stored within the respective browser (ex-ante)
-2. **Server based** API: Usage based on a authentication token acquired via a netID Partner specific Single Sign-on.
+2. **Server based** API: Usage based on a authentication token acquired via a Single Sign-on.
 
 The distinction browser vs. server-based refers mainly to how active users are authenticated prior to API usage/from where the APIs are being called.
 
@@ -49,7 +51,7 @@ The export APIs allows a partner to export the netID Permissions/TC String as we
 
 Authentication of partners for the browser-based APIs is handled via the
 parameter `tapp_id` and the `Origin` header. Access is secured via
-CORS.
+[CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing)
 
 - Multiple URLs are allowed per publisher (TAPP). Those URLs must be registered upfront
 - The read/write request must be made from an eligible URL.
@@ -57,7 +59,7 @@ CORS.
 Authentication with the server-based APIs is done as follows.
 
 - The user-specific read/write access is secured via respective access tokens (authorization).
-- Generic Data Export using Basic Authentication
+- Generic Data Export uses basic authentication
 
 ## User authentication when using APIs
 

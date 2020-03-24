@@ -2,21 +2,19 @@
 
 Description of the browser-based integration by the CMP (Headless CMP)
 
+##  API flow examples
+
+### Obtaining a privacy status
+
+The following sequence illustrates the API calls initiated by a Partners CMP to establish a privacy status for an already authenticated user. 
+
 ![Browser based API](../diagrams/out/seq_cmp_webapi.svg)
 
-## Exemplary Procedure for obtaining Consents
+## Read APIs
 
-1. JS checks for the presence of a cookie with the TC string in the Publisher domain.
-1. If there is no TC string present → JS tries to retrieve the TC string from the netID READ SERVICE
-1. If a TC String exists and permissions suffice → abort and continue processing. Otherwise display overlay for the purpose of obtaining permissions from the user.
-1. User makes his choice (TCF /identification with netID) via the CMP Interface
-1. JS writes the TC String via the netID WRITE SERVICE, as well as (if given) the consent for identification via netID.
-1. JS also writes the TC string as a local cookie in the publisher domain.
+### User identifier
 
-## Reading the netID Identifier (TPID)
-
-If the ORIGIN is eligible, a publisher (TAPP) can retrieve the netID
-Identifier (TPID) via the following interface:
+If the ORIGIN is eligible, a publisher (TAPP) can retrieve the user’s identifier (TPID) via the following interface:
 
 ``` shell
 GET https://READSERVICE.netid.de/identification/tpid?tapp_id=<TAPP_ID>
@@ -37,31 +35,30 @@ Access-Control-Allow-Credentials: true
 }
 ```
 
-### JSON Properties
+**JSON Properties**
 
 | |Description|
 |---|---|
-| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
+| tpid | Users identifier (`tpid`). Only present if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
 
-| status | meaning | pid |
+| status | meaning | tpid |
 | ----------- | ----------- | ----------- |
 | OK | Call successful | x |
 | NO_TPID | There was no tpid_sec cookie available. | - |
 | TOKEN_ERROR | Token (JWT) in the cookie has expired or is invalid. | - |
 | CONSENT_REQUIRED | Consent for passing on the TPID missing ("Identification"). | - |
 
-## Read permission (TC string)
+### Privacy status
 
 ``` shell
-GET https://READSERVICE.netid.de/permissions/iab-permissions?tapp_id=<TAPP_ID>
-Accept: application/vnd.netid.permissions.iab-permission-read-v1+json
-Cookie: tpid_sec=<JWT_TOKEN>
-Origin: <ORIGIN>
+GET https://READSERVICE.netid.de/permissions/iab-permissions?
+    tapp_id=<TAPP_ID>
+    Cookie: tpid_sec=<JWT_TOKEN>
+    Origin: <ORIGIN>
 ```
 
 ``` shell
 200 OK
-Content-Type: application/vnd.netid.permissions.iab-permission-read-v1+json
 Access-Control-Allow-Origin: <ORIGIN>
 Access-Control-Allow-Credentials: true
 
@@ -72,11 +69,11 @@ Access-Control-Allow-Credentials: true
 }
 ```
 
-### JSON Properties
+**JSON Properties**
 
 | |Description|
 |---|---|
-| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
+| tpid | Users identifier (`tpid`). Only present if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null. |
 | tc | The TC string stored for this `tpid` for this publisher (TCF 2.0). Only with status "OK". Otherwise null. |
 
 | status | meaning | tc | pid |
@@ -86,13 +83,15 @@ Access-Control-Allow-Credentials: true
 | TOKEN_ERROR | Token (JWT) in the cookie has expired or is invalid. | - | - |
 | CONSENT_REQUIRED | Consent for passing on the TPID missing ("Identification"). | x | - |
 
-## Write permission (TC string)
+## Write API
+
+### Privacy status
 
 ``` shell
-POST https://WRITESERVICE.netid.de/permissions/iab-permissions?tapp_id=<TAPP_ID>
-Content-Type: application/vnd.netid.permissions.iab-permission-write-v1+json
-Cookie: tpid_sec=<JWT_TOKEN>
-Origin: <ORIGIN>
+POST https://WRITESERVICE.netid.de/permissions/iab-permissions?
+      tapp_id=<TAPP_ID>
+      Cookie: tpid_sec=<JWT_TOKEN>
+      Origin: <ORIGIN>
 
 {
   "identification": "true|false",
@@ -102,9 +101,10 @@ Origin: <ORIGIN>
 
 ``` shell
 201 CREATED
-Location: https://READSERVICE.netid.de/permissions/iab-permissions?tapp_id=<TAPP_ID>
-Access-Control-Allow-Origin: <ORIGIN>
-Access-Control-Allow-Credentials: true
+Location: https://READSERVICE.netid.de/permissions/iab-permissions?
+      tapp_id=<TAPP_ID>
+      Access-Control-Allow-Origin: <ORIGIN>
+      Access-Control-Allow-Credentials: true
 
 {
   "tpid": "<TPID>|null",
@@ -115,25 +115,23 @@ Access-Control-Allow-Credentials: true
 Remarks:
 
 - If permission "identification" has been given by the user, this must be signaled by passing "identification: true". For the avoidance of doubt, this of course requires the prior collection of this consent by the CMP.
-
 - If only the TC string is to be updated and the permission "Identification" already exists, only the "tc" attribute can be passed. Both can also be written at the same time.
-
 - In case of revocation of permission "Identification", would pass only "identification: false".
 
-### JSON Properties
+**JSON Properties**
 
 **request**
 
 | |Description|
 |---|---|
-| identification | The permission "Identification" (ID CONSENT) is to be stored (or revoked). |
-| tc | The TC String which should be stored for this tpid` for this publisher (TCF 2.0). |
+| identification | Boolean flag, indicating the status of the permission "Identification". <br>*Yes* = Consent given <br> *No* = consent not given / revoked |
+| tc | The TC String which should be stored for this this user in relation to the netID Partner (TCF 2.0) |
 
 **response**
 
 | |Description|
 |---|---|
-| tpid | The ID of the netID user (`tpid`). Only if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise zero.|
+| tpid | Users identifier (`tpid`). Only present if consent "Identification" is given, the `tpid` is present and status "OK". Otherwise null.|
 
 | status | meaning |
 | ----------- | ----------- |
