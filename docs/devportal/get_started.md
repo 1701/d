@@ -33,7 +33,7 @@ Creating a new account also requires you to create an associate company profile,
 
 To complete the registration, click on **Complete registration**.
 
-!!! warning  ""
+!!! info  ""
     Accepting the user contract requires you to be eligible to act on behalf of your company (as registered in this step). The developer portal supports different roles to address that, namely **Developer** and **Representative**. After finishing the signup process the registered user has the role **Representative**
 
 For Details on Roles/User-Management see [User Management][1].
