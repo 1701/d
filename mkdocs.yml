@@ -26,10 +26,7 @@ theme:
 
 # Site Navigation
 nav:
-    - About netID:
-        - Home: index.md
-        - Glossary: glossary.md
-        - FAQ: faq.md
+    - About netID: index.md
     - Developer Portal:
         - Getting started: devportal/get_started.md
         - Tutorials:
@@ -47,6 +44,8 @@ nav:
         - Browser-based API: cmp/browser-based.md
         - Server-based API: cmp/server-based.md
         - Data export API: cmp/export.md
+    - Glossary: glossary.md
+    - FAQ: faq.md
 
 # Extensions
 markdown_extensions:
