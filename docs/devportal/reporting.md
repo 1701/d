@@ -35,13 +35,13 @@ The netID Developer Portal provides KPIs in individual reports as .cvs files for
 
 The netID Developer Portal provides individual reports as .cvs files for download.
 
-To download a report, click on Reports in the navigation on the left.
+- To download a report, click on Reports in the navigation on the left.
 An overview of all available reports is displayed.
 
-Click on download to the right of the report you wish to download.
+- Click on download to the right of the report you wish to download.
 
-A notification appears asking you whether you want to open or save the report.
+- A notification appears asking you whether you want to open or save the report.
 
-Select whether you want to open or save the report by clicking on Open or Save/Save As.
+- Select whether you want to open or save the report by clicking on Open or Save/Save As.
 
-The desired report is downloaded.
+- The desired report is downloaded.
