@@ -26,27 +26,29 @@ participant  "Permission Layer" as pl
 participant  "Read Service" as rs
 participant  "IdentWrite Service" as ws
 
-cmp -> br : Check TC string cookie in the Publisher domain.
+cmp -> br : Check local/cached status at netID Partner
 activate br
-br -> cmp : response
+br -> cmp : response: unknown user, no privacy status present
 deactivate br
-group If there is no TC string present
-    cmp -> rs : try to retrieve the TC string
+group Check Status (privacy settings, user authentication)
+    cmp -> rs : try to retrieve privacy status for authenticated user
     activate rs
-    rs -> cmp : response
+    rs -> cmp : response - OK, CONSENT_REQUIRED, no privacy status present
     deactivate rs
     end
-group If a TC String exists and permissions suffice
-    cmp -> pl : abort and continue processing. Otherwise display overlay for the purpose of obtaining permissions from the user.
-    activate pl
-    pl -> cmp : response
-    deactivate pl
+group Display CMP User Interface - establish privacy status 
+    cmp -> br : Display CMP UI - establish privacy status
+    activate br
+    br -> cmp : response: User choices for privacy status
+    deactivate br
     end
-cmp -> ws : JS writes the TC String via the netID WRITE SERVICE, as well as (if given) the consent for identification via netID.
+Group Permantenly store privacy status with user account
+cmp -> ws : store no privacy status via the WRITE SERVICE
 activate ws
-ws -> cmp : response
+ws -> cmp : response: OK, TPID, privacy status 
 deactivate ws
-cmp -> br : JS also writes the TC string as a local cookie in the publisher domain.
+end
+cmp -> br : cache local status in netID Partner domain
 activate br
 br -> cmp : response
 deactivate br
